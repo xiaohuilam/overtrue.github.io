@@ -235,3 +235,6 @@ $user->save();
 
 OK，这基本上就搞定了，当然，你用分页的时候会出问题，我们下一节再讲。
 
+## 有用的链接
+- [Laravel官网](http://laravel.com)
+- [Laravel中文网](http://golaravel.com)
