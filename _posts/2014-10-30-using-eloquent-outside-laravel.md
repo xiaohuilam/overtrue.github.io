@@ -9,8 +9,8 @@ excerpt: 详细讲解如何在你自己的非Laravel项目里使用Laravel的强
 
 ## 安装
 
-首先我们得有`composer`，安装方法请详见：https://getcomposer.org/doc/00-intro.md 
-可能没有翻墙的情况下使用composer会比较慢，那么这里同样有福利：http://pkg.phpcomposer.com/ 。
+首先我们得有`composer`，安装方法请详见：[https://getcomposer.org/doc/00-intro.md ](https://getcomposer.org/doc/00-intro.md)
+可能没有翻墙的情况下使用composer会比较慢，那么这里同样有福利：[http://pkg.phpcomposer.com/](http://pkg.phpcomposer.com/) 。
 
 我们这里建议一个项目demo, 然后我们在demo目录下执行：
 
