@@ -1,10 +1,9 @@
 ---
 layout: post
 title: 在Laravel外独立使用Eloquent
-excerpt: 讲解如何在你自己的非Laravel项目里使用Eloquent.
+excerpt: 详细讲解如何在你自己的非Laravel项目里使用Laravel的强大ORM：Eloquent.
 ---
 
-在Laravel外独立使用Eloquent
 
 不得不承认Laravel的Eloquent是一个很棒的ORM，其实Laravel框架的设计本身结构使用的是subtree实现(外层使用的[git-subsplit](https://github.com/dflydev/git-subsplit)) , 也就是说Eloquent是独立的模块，我们也可以在自己的项目里通过composer来使用Eloquent，本文就详细讲解如何在自己的项目集成Eloquent。
 
