@@ -173,7 +173,7 @@ php table.php
 
 然后我们的查看MySQL数据库`domo`里就会有一个`users`表了:
 
-![demo-db](/attachments/images/db-demo.png)
+![demo-db]({{ site.url }}/attachments/images/db-demo.png)
 
 ##  写入数据
 
