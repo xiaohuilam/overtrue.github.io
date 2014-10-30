@@ -17,7 +17,9 @@ excerpt: 详细讲解如何在你自己的非Laravel项目里使用Laravel的强
 ```shell
 composer require illuminate/database:~4.2
 ```
+
 那么你应该会看到：
+
 ```shell
 Using version ~4.2 for illuminate/database
 ./composer.json has been created
@@ -108,6 +110,7 @@ $capsule->bootEloquent();
 最终的文件`demo/start.php`应该是这样：
 
 demo/start.php: 
+
 ```php
 <?php
 
