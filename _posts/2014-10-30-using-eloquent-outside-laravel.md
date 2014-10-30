@@ -66,8 +66,6 @@ demo/start.php:
 // 载入composer的autoload文件
 include __DIR__ . '/vendor/autoload.php';
 ```
-上面主要做了一件事情就是载入composer 的自动加载器。
-
 然后我们加入数据库配置：
 
 ```php
