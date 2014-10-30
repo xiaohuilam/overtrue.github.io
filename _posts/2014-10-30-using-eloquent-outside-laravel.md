@@ -127,7 +127,7 @@ $database = [
 ];
 
 use Illuminate\Container\Container;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Capsule\Manager as Capsule;//如果你不喜欢这个名称，as DB;就好 
 
 $capsule = new Capsule;
 
@@ -140,6 +140,8 @@ $capsule->setAsGlobal();
 // 启动Eloquent
 $capsule->bootEloquent();
 ```
+
+那么现在只要你需要使用到Eloquent的地方载入这个文件即可， 下面我们来简单介绍一下使用。
 
 ## 建表
 
