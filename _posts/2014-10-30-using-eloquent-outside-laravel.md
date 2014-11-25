@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在Laravel外独立使用Eloquent
+title: 在Laravel外使用Eloquent（一）
 excerpt: 详细讲解如何在你自己的非Laravel项目里使用Laravel的强大ORM：Eloquent.
 ---
 
@@ -234,6 +234,8 @@ $user->save();
 ```
 
 OK，这基本上就搞定了，当然，你用分页的时候会出问题，我们下一节再讲。
+
+[《在Laravel外使用Eloquent（二）- 分页问题》](/2014/11/25/using-eloquent-outside-laravel-2.html) 
 
 更多关于Eloquent的使用请参考: [http://v4.golaravel.com/docs/4.1/eloquent](http://v4.golaravel.com/docs/4.1/eloquent)
 
