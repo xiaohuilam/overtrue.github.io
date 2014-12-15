@@ -188,7 +188,7 @@ include __DIR__ . '/start.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-Capsule::insert(array(
+Capsule::table('users')->insert(array(
         array('username' => 'Hello',  'email' => 'hello@world.com'),
         array('username' => 'Carlos',  'email' => 'anzhengchao@gmail.com'),
         array('username' => 'Overtrue',  'email' => 'i@overtrue.me'),
