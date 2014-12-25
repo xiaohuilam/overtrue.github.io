@@ -25,4 +25,4 @@ public function getIdAttribute($id)
 
 方法名：`get属性名大驼峰Attribute`, ex: `object_id` -> `getObjectIdAttribute`
 
-框架源码参考：https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Model.php#L2409-L2419
+框架源码参考：[getAttribute](https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Model.php#L2409-L2419)
