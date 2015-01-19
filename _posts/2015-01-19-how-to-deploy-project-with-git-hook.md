@@ -26,6 +26,18 @@ sudo chown -R apache:apache /var/www/.ssh/
 
 2. 生成公钥
 
+公钥有两个：1. git用户公钥，2. 部署公钥：
+
+1. 用户公钥（用于git clone时认证权限）
+
+```shell
+ssh-keygen -t rsa -C "anzhengchao@gmail.com"
+# 然后一直回车就行
+# 生成的文件通常是 /root/.ssh/id_rsa，如果非root用户请查看提示上的路径
+```
+
+2. 部署公钥
+
 ```shell
 sudo -Hu apache ssh-keygen -t rsa # 请选择 "no passphrase"，一直回车下去
 sudo cat /var/www/.ssh/id_rsa.pub # 查看生成的密钥内容，复制全部
@@ -59,12 +71,15 @@ git config --global user.email "anzhengchao@gmail.com" # 邮箱请与conding上�
 ```
 
 ## 在代码托管网站
+1. 添加用户公钥
 
-1. 复制`/var/www/.ssh/id_rsa.pub`的内容并添加到Coding.net公钥:
+复制上面的`/root/.ssh/id_rsa.pub`的内容到个人设置页`https://coding.net/user/setting/keys`添加即可
+
+2. 复制`/var/www/.ssh/id_rsa.pub`的内容并添加到Coding.net公钥:
 
 > 选择项目 > 设置 > 部署公钥 > 新建 > 粘贴到下面框并确认
 
-2. 添加hook
+3. 添加hook
 
 > 选择项目 > 设置 > WebHook > 新建hook > 粘贴你的hook/index.php所在的网址。比如:http://example.com/hook/index.php, 令牌可选，但是建议写上。
 
