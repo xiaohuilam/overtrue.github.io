@@ -1,3 +1,9 @@
+---
+layout: post
+title: 使用PHP脚本远程部署git项目
+excerpt: 天以Coding上私有库的部署为例来讲解如何使用Coding的hook服务结合PHP脚本来自动部署到生产环境的服务器
+---
+
 2015第一篇文章，没啥技术含量，权当作个笔记。
 
 我们通常在一些git托管网站托管我们的代码，除了大家耳熟能详的[GitHub](https://github.com), 还有国外的[Bitbucket](https://bitbucket.org/)等，国内的[开源中国](http://git.oschina.net/)、[Coding](https://coding.net/)等都是不错的选择。
