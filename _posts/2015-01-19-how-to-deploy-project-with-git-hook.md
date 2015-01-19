@@ -93,6 +93,7 @@ git config --global user.email "anzhengchao@gmail.com" # 邮箱请与conding上�
 sudo chown -R apache:apache /www/hook/repos
 sudo -Hu apache git clone git@coding.net:you/repo.git /www/hook/repos/  --depth=1
 ```
+### ！！注意，这里初始化clone必须要用www用户
 
 2. 往Coding.net提交一次代码测试：
 
