@@ -79,5 +79,6 @@ git commit -am "test hook" --allow-empty
 git push 
 ```
 
-OK，正常的话你在代码里配置的目标目录里就会有你的项目代码了。
+OK，稍微一几秒，正常的话你在代码里配置的目标目录里就会有你的项目文件了。
 
+有问题请随时反馈：https://gist.github.com/overtrue/0bf1cd704bf804de2e2c
