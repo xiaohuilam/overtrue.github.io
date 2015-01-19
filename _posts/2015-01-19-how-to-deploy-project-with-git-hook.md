@@ -13,7 +13,7 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 ## 准备工作
 
 - 在Coding.net上创建一个私有库
-- 安装了web服务的服务器
+- 安装了web服务与git服务的服务器
 
 ## 在服务器上
 
@@ -50,6 +50,13 @@ chown -R apache:apache /www/hook # 这里请改成你创建的hook目录
 ```
 
 确保你的hook文件可以访问：http://example.com/hook/index.php，钩子准备完成。
+
+4. 修改git配置
+
+```shell
+git config --global user.name "overtrue" 
+git config --global user.email "anzhengchao@gmail.com" # 邮箱请与conding上一致
+```
 
 ## 在代码托管网站
 
