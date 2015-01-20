@@ -20,8 +20,8 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 1. 创建web服务器用户目录，这里以apache用户为例，不同的环境请根据自己环境自行修改：
 
  ```shell
-  sudo mkdir /var/www/.ssh
-  sudo chown -R apache:apache /var/www/.ssh/
+ sudo mkdir /var/www/.ssh
+ sudo chown -R apache:apache /var/www/.ssh/
  ```
 
 2. 生成公钥
@@ -31,16 +31,16 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 3. 用户公钥（用于git clone时认证权限）
 
  ```shell
-  ssh-keygen -t rsa -C "anzhengchao@gmail.com"
-  # 然后一直回车就行
-  # 生成的文件通常是 /root/.ssh/id_rsa，如果非root用户请查看提示上的路径
+ ssh-keygen -t rsa -C "anzhengchao@gmail.com"
+ # 然后一直回车就行
+ # 生成的文件通常是 /root/.ssh/id_rsa，如果非root用户请查看提示上的路径
  ```
 
 4. 部署公钥
 
  ```shell
-  sudo -Hu apache ssh-keygen -t rsa # 请选择 "no passphrase"，一直回车下去
-  sudo cat /var/www/.ssh/id_rsa.pub # 查看生成的密钥内容，复制全部
+ sudo -Hu apache ssh-keygen -t rsa # 请选择 "no passphrase"，一直回车下去
+ sudo cat /var/www/.ssh/id_rsa.pub # 查看生成的密钥内容，复制全部
  ```
 
 5. 准备钩子文件
@@ -52,13 +52,13 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
   在此目录下建立一个目录`repos`:
   
  ```shell
-  mkdir repos
+ mkdir repos
  ```
   
   修改目录权限：
   
  ```shell
-  chown -R apache:apache /www/hook # 这里请改成你创建的hook目录
+ chown -R apache:apache /www/hook # 这里请改成你创建的hook目录
  ```
   
   确保你的hook文件可以访问：http://example.com/hook/index.php，钩子准备完成。
@@ -66,8 +66,8 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 4. 修改git配置
 
  ```shell
-  git config --global user.name "overtrue" 
-  git config --global user.email "anzhengchao@gmail.com" # 邮箱请与conding上一致
+ git config --global user.name "overtrue" 
+ git config --global user.email "anzhengchao@gmail.com" # 邮箱请与conding上一致
  ```
 
 ## 在代码托管网站
@@ -91,16 +91,16 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 1. 我们需要先在服务器上clone一次，以后都可以实现自动部署了：
 
  ```shell
-      sudo chown -R apache:apache /www/hook/repos
-      sudo -Hu apache git clone git@coding.net:you/repo.git /www/hook/repos/  --depth=1
+  sudo chown -R apache:apache /www/hook/repos
+  sudo -Hu apache git clone git@coding.net:you/repo.git /www/hook/repos/  --depth=1
  ```
     **！！注意，这里初始化clone必须要用www用户**
 
 2. 往Coding.net提交一次代码测试：
   
-  ```shell
-     git commit -am "test hook" --allow-empty
-     git push 
+ ```shell
+  git commit -am "test hook" --allow-empty
+  git push 
  ```
 
 OK，稍微一几秒，正常的话你在代码里配置的目标目录里就会有你的项目文件了。
