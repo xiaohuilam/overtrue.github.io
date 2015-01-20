@@ -65,42 +65,42 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 
 4. 修改git配置
 
-```shell
-git config --global user.name "overtrue" 
-git config --global user.email "anzhengchao@gmail.com" # 邮箱请与conding上一致
-```
+  ```shell
+  git config --global user.name "overtrue" 
+  git config --global user.email "anzhengchao@gmail.com" # 邮箱请与conding上一致
+  ```
 
 ## 在代码托管网站
 1. 添加用户公钥
 
-复制上面的`/root/.ssh/id_rsa.pub`的内容到个人设置页`https://coding.net/user/setting/keys`添加即可
+  复制上面的`/root/.ssh/id_rsa.pub`的内容到个人设置页`https://coding.net/user/setting/keys`添加即可
 
 2. 复制`/var/www/.ssh/id_rsa.pub`的内容并添加到Coding.net公钥:
 
-> 选择项目 > 设置 > 部署公钥 > 新建 > 粘贴到下面框并确认
+  > 选择项目 > 设置 > 部署公钥 > 新建 > 粘贴到下面框并确认
 
 3. 添加hook
 
-> 选择项目 > 设置 > WebHook > 新建hook > 粘贴你的hook/index.php所在的网址。比如:http://example.com/hook/index.php, 令牌可选，但是建议写上。
+  > 选择项目 > 设置 > WebHook > 新建hook > 粘贴你的hook/index.php所在的网址。比如:http://example.com/hook/index.php, 令牌可选，但是建议写上。
 
-稍过几秒刷新页面查看hook状态，显示为绿色勾就OK了。
+  稍过几秒刷新页面查看hook状态，显示为绿色勾就OK了。
 
 ## 初始化
 
-1. 我们需要先在服务器上clone一次，以后都可以实现自动部署了：
+  1. 我们需要先在服务器上clone一次，以后都可以实现自动部署了：
 
-```shell
-sudo chown -R apache:apache /www/hook/repos
-sudo -Hu apache git clone git@coding.net:you/repo.git /www/hook/repos/  --depth=1
+  ```shell
+  sudo chown -R apache:apache /www/hook/repos
+  sudo -Hu apache git clone git@coding.net:you/repo.git /www/hook/repos/  --depth=1
 ```
 ### ！！注意，这里初始化clone必须要用www用户
 
-2. 往Coding.net提交一次代码测试：
-
-```shell
-git commit -am "test hook" --allow-empty
-git push 
-```
+  2. 往Coding.net提交一次代码测试：
+  
+  ```shell
+  git commit -am "test hook" --allow-empty
+  git push 
+  ```
 
 OK，稍微一几秒，正常的话你在代码里配置的目标目录里就会有你的项目文件了。
 
