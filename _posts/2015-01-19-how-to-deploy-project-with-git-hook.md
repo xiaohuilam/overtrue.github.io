@@ -87,20 +87,20 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 
 ## 初始化
 
-  1. 我们需要先在服务器上clone一次，以后都可以实现自动部署了：
+1. 我们需要先在服务器上clone一次，以后都可以实现自动部署了：
 
-    ```shell
+ ```shell
       sudo chown -R apache:apache /www/hook/repos
       sudo -Hu apache git clone git@coding.net:you/repo.git /www/hook/repos/  --depth=1
-    ```
+ ```
     **！！注意，这里初始化clone必须要用www用户**
 
-  2. 往Coding.net提交一次代码测试：
+2. 往Coding.net提交一次代码测试：
   
-    ```shell
+  ```shell
      git commit -am "test hook" --allow-empty
      git push 
-    ```
+ ```
 
 OK，稍微一几秒，正常的话你在代码里配置的目标目录里就会有你的项目文件了。
 
