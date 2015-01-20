@@ -45,7 +45,7 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 
 5. 准备钩子文件
 
-  在你的www目录建立一个目录`hook`, 里面放上一个php文件，内容如下：
+  在你的www目录建立一个目录`hook`, 里面放上一个php文件`index.php`，内容如下：
   
   <script src="https://gist.github.com/overtrue/0bf1cd704bf804de2e2c.js"></script>
   
