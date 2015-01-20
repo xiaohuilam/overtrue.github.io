@@ -19,49 +19,49 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 
 1. 创建web服务器用户目录，这里以apache用户为例，不同的环境请根据自己环境自行修改：
 
-```shell
-sudo mkdir /var/www/.ssh
-sudo chown -R apache:apache /var/www/.ssh/
-```
+  ```shell
+  sudo mkdir /var/www/.ssh
+  sudo chown -R apache:apache /var/www/.ssh/
+  ```
 
 2. 生成公钥
 
-公钥有两个：1. git用户公钥，2. 部署公钥：
+  公钥有两个：1. git用户公钥，2. 部署公钥：
 
-1. 用户公钥（用于git clone时认证权限）
+3. 用户公钥（用于git clone时认证权限）
 
-```shell
-ssh-keygen -t rsa -C "anzhengchao@gmail.com"
-# 然后一直回车就行
-# 生成的文件通常是 /root/.ssh/id_rsa，如果非root用户请查看提示上的路径
-```
+  ```shell
+  ssh-keygen -t rsa -C "anzhengchao@gmail.com"
+  # 然后一直回车就行
+  # 生成的文件通常是 /root/.ssh/id_rsa，如果非root用户请查看提示上的路径
+  ```
 
-2. 部署公钥
+4. 部署公钥
 
-```shell
-sudo -Hu apache ssh-keygen -t rsa # 请选择 "no passphrase"，一直回车下去
-sudo cat /var/www/.ssh/id_rsa.pub # 查看生成的密钥内容，复制全部
-```
+  ```shell
+  sudo -Hu apache ssh-keygen -t rsa # 请选择 "no passphrase"，一直回车下去
+  sudo cat /var/www/.ssh/id_rsa.pub # 查看生成的密钥内容，复制全部
+  ```
 
 3. 准备钩子文件
 
-在你的www目录建立一个目录`hook`, 里面放上一个php文件，内容如下：
-
-<script src="https://gist.github.com/overtrue/0bf1cd704bf804de2e2c.js"></script>
-
-在此目录下建立一个目录`repos`:
-
-```shell
-mkdir repos
-```
-
-修改目录权限：
-
-```shell
-chown -R apache:apache /www/hook # 这里请改成你创建的hook目录
-```
-
-确保你的hook文件可以访问：http://example.com/hook/index.php，钩子准备完成。
+  在你的www目录建立一个目录`hook`, 里面放上一个php文件，内容如下：
+  
+  <script src="https://gist.github.com/overtrue/0bf1cd704bf804de2e2c.js"></script>
+  
+  在此目录下建立一个目录`repos`:
+  
+  ```shell
+  mkdir repos
+  ```
+  
+  修改目录权限：
+  
+  ```shell
+  chown -R apache:apache /www/hook # 这里请改成你创建的hook目录
+  ```
+  
+  确保你的hook文件可以访问：http://example.com/hook/index.php，钩子准备完成。
 
 4. 修改git配置
 
