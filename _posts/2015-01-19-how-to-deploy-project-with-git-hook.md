@@ -19,10 +19,10 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 
 1. 创建web服务器用户目录，这里以apache用户为例，不同的环境请根据自己环境自行修改：
 
- ```shell
+```shell
   sudo mkdir /var/www/.ssh
   sudo chown -R apache:apache /var/www/.ssh/
- ```
+```
 
 2. 生成公钥
 
@@ -30,20 +30,20 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 
 3. 用户公钥（用于git clone时认证权限）
 
- ```shell
+```shell
   ssh-keygen -t rsa -C "anzhengchao@gmail.com"
   # 然后一直回车就行
   # 生成的文件通常是 /root/.ssh/id_rsa，如果非root用户请查看提示上的路径
- ```
+```
 
 4. 部署公钥
 
- ```shell
+```shell
   sudo -Hu apache ssh-keygen -t rsa # 请选择 "no passphrase"，一直回车下去
   sudo cat /var/www/.ssh/id_rsa.pub # 查看生成的密钥内容，复制全部
- ```
+```
 
-3. 准备钩子文件
+5. 准备钩子文件
 
   在你的www目录建立一个目录`hook`, 里面放上一个php文件，内容如下：
   
@@ -65,12 +65,13 @@ excerpt: 以Coding上私有库的部署为例来讲解如何使用Coding的hook�
 
 4. 修改git配置
 
- ```shell
+```shell
   git config --global user.name "overtrue" 
   git config --global user.email "anzhengchao@gmail.com" # 邮箱请与conding上一致
- ```
+```
 
 ## 在代码托管网站
+
 1. 添加用户公钥
 
   复制上面的`/root/.ssh/id_rsa.pub`的内容到个人设置页`https://coding.net/user/setting/keys`添加即可
