@@ -11,10 +11,8 @@ class: padY30
 
 ## 概况
 
-- 电话：186-1168-7990
 - 邮箱：anzhengchao#gmail.com
 - 主页：[http://overtrue.me](http://overtrue.me)
-- Q Q：44294631
 - 微博：[@安正超](http://weibo.com/joychaocc)
 
 计算机专业毕业，2年在职工作经验，3年PHP开发经验。
