@@ -45,7 +45,7 @@ class: padY30
 | javascript | ★★★★☆ |
 | Nodejs | ★★★★☆ |
 | Markdown | ★★★★★ |
-| C | ★★★★☆ |
+| C | ★★★☆☆ |
 | Photoshop | ★★★★☆ |
 
 
