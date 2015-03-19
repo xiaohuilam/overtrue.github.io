@@ -19,38 +19,38 @@ App\Http\Controllers\WelcomeController@index
 可是这不是我们想要的，我们只想获取控制器名或者方法名，那么，你可以自定义下面三个函数来实现：
 
 ```php
-  /**
-	 * 获取当前控制器名
-	 *
-	 * @return string
-	 */
-	public function getCurrentControllerName()
-	{
-		return getCurrentAction()['controller'];
-	}
+/**
+ * 获取当前控制器名
+ *
+ * @return string
+ */
+public function getCurrentControllerName()
+{
+    return getCurrentAction()['controller'];
+}
 
-	/**
-	 * 获取当前方法名
-	 *
-	 * @return string
-	 */
-	public function getCurrentMethodName()
-	{
-		return getCurrentAction()['method'];
-	}
+/**
+ * 获取当前方法名
+ *
+ * @return string
+ */
+public function getCurrentMethodName()
+{
+    return getCurrentAction()['method'];
+}
 
-	/**
-	 * 获取当前控制器与方法
-	 *
-	 * @return array
-	 */
-	public function getCurrentAction()
-	{
-		$action = \Route::current()->getActionName();
-		list($class, $method) = explode('@', $action);
+/**
+ * 获取当前控制器与方法
+ *
+ * @return array
+ */
+public function getCurrentAction()
+{
+    $action = \Route::current()->getActionName();
+    list($class, $method) = explode('@', $action);
 
-		return ['controller' => $class, 'method' => $method];
-	}
+    return ['controller' => $class, 'method' => $method];
+}
 ```
 
 另外推荐近期完成的两个 Laravel 拓展包：
