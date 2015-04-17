@@ -77,16 +77,20 @@ protected $listen = [
 
 ```php
     /**
-     * Handle the event.
+     * 处理用户登录
      *
-     * @param  Events  $event
+     * @param User    $user     用户
+     * @param boolean $remember 是否记住登录
+     *
      * @return void
      */
     public function handle(User $user, $remember)
     {
         $user->last_login_at = Carbon::now();
         $user->last_ip = $this->request->ip();
-        //TODO:其它动作
+
+        //TODO:其它动作，比如增加积分等等。
+
         $user->save();
     }
 ```
@@ -137,9 +141,11 @@ class AuthLoginEventHandler {
     }
 
     /**
-     * Handle the event.
+     * 处理用户登录
      *
-     * @param  Events  $event
+     * @param User    $user     用户
+     * @param boolean $remember 是否记住登录
+     *
      * @return void
      */
     public function handle(User $user, $remember)
@@ -147,11 +153,10 @@ class AuthLoginEventHandler {
         $user->last_login_at = Carbon::now();
         $user->last_ip = $this->request->ip();
 
-        //TODO:其它动作
+        //TODO:其它动作，比如增加积分等等。
 
         $user->save();
     }
-
 }
 ```
 
