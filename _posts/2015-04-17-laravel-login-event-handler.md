@@ -100,6 +100,11 @@ protected $listen = [
 ```php
     ...
 
+    /**
+     * Request 对象
+     *
+     * @var Illuminate\Http\Request
+     */
     protected $request;
 
     /**
@@ -128,6 +133,11 @@ use Carbon\Carbon;
 
 class AuthLoginEventHandler {
 
+    /**
+     * Request 对象
+     *
+     * @var Illuminate\Http\Request
+     */
     protected $request;
 
     /**
