@@ -24,9 +24,6 @@ php artisan handler:event AuthLoginEventHandler
 
 use Illuminate\Contracts\Queue\ShouldBeQueued;
 use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Http\Request;
-use App\Models\User;
-use Carbon\Carbon;
 
 class AuthLoginEventHandler {
 
