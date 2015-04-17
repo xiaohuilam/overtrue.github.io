@@ -74,7 +74,7 @@ protected $listen = [
 这里 `auth.login` 事件框架会传递两个参数：`用户实例`, `是否记住登录`，所以我们修改我们刚刚创建的 `AuthLoginEventHandler.php` 中的 `handle` 方法：
 
 ```php
-/**
+    /**
      * Handle the event.
      *
      * @param  Events  $event
