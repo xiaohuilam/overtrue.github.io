@@ -75,7 +75,7 @@ code { background-color: rgba(0,0,0,0.04); border-radius: 3px; padding:0 3px; fo
 
 /* page */
 .page-title {padding:3em 0; }
-.page-content {padding:2em 0; min-height: 100%; word-break:break-all;}
+.page-content {padding:2em 0; min-height: 100%; word-break:break-word;}
 .page-content table {word-break:normal;}
 
 /* footer */
