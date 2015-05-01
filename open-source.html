@@ -34,21 +34,7 @@ menu: open-source
     </li>
 </div>
 <script>
-  var repos = [];
-
-  {% for repo in site.github.public_repositories %}
-    var repo = {
-      name: "{{repo.name}}",
-      html_url: "{{repo.html_url}}",
-      description: "{{repo.description}}",
-      homepage: "{{repo.homepage}}",
-      language: "{{repo.language}}",
-      stars: {{repo.stargazers_count}},
-      forks: {{repo.forks_count}},
-      fork: {{repo.fork}}
-    };
-    repos.push(repo);
-  {% endfor %}
+  var repos = {{ site.github.public_repositories |jsonfy }};
 </script>
 <script>
     if (!Array.prototype.indexOf) {
@@ -74,8 +60,6 @@ menu: open-source
         $.each(data.items, function(index, repo) {
             for (i in repo) {
                 var property = repo[i];
-console.log(new RegExp('/\['+i+'\]/g'));
-console.log(property);
                 ul += source.replace(new RegExp('\['+i+'\]', 'g'), property);
             }
         });
