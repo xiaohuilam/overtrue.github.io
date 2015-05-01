@@ -23,7 +23,6 @@ gems:
   - jemoji
   - jekyll-mentions
   - jekyll-sitemap
-  # - jekyll-timeago
 
 disqus:
   id: overtrueme
@@ -57,23 +56,3 @@ navs:
   -
     href: /about
     label: About
-
-
-jekyll_timeago:
-  depth: 2 # Level of detail
-  today: '今天'
-  yesterday: '昨天'
-  tomorrow: '明天'
-  and: '和'
-  suffix: '前'
-  prefix: ''
-  suffix_future: ''
-  prefix_future: 'in'
-  years: '年'
-  year: '年'
-  months: '月'
-  month: '月'
-  weeks: '周'
-  week: '周'
-  days: '天'
-  day: '天'
