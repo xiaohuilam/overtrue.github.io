@@ -69,13 +69,13 @@ menu: open-source
 
     function template (data) {
         var source = $('#repoTemplate').html();
-        var ul = [];
+        var ul = '';
 
         $.each(data, function(index, repo) {
             for (i in repo) {
                 var property = repo[i];
 
-                ul.append(source.replace(new RegExp('/['+i+']/g'), property));
+                ul += source.replace(new RegExp('/['+i+']/g'), property);
             }
         });
 
