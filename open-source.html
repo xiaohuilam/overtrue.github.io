@@ -58,12 +58,15 @@ menu: open-source
         var ul = '';
 
         $.each(data.items, function(index, repo) {
+            var t = source;
             for (i in repo) {
                 var property = repo[i];
                 console.log(new RegExp('\\['+i+'\\]', 'g'));
                 console.log(property);
-                ul += source.replace(new RegExp('\\['+i+'\\]', 'g'), property);
+                t = t.replace(new RegExp('\\['+i+'\\]', 'g'), property);
             }
+
+            ul += t;
         });
 
         return ul;
