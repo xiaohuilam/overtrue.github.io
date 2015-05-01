@@ -17,9 +17,12 @@ paginate:   10
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 
 gems:
   - jemoji
+  - jekyll-mentions
+  - jekyll-sitemap
 
 disqus:
   id: overtrueme
