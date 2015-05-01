@@ -51,7 +51,7 @@ body {
     margin-bottom: 0;
     font-size: 32px;
     font-weight: normal;
-    line-height: 28px
+    line-height: 28px;
 }
 
 .site-header h1 strong {
@@ -59,7 +59,11 @@ body {
 }
 
 .site-header h1 a {
-    white-space: nowrap
+    white-space: nowrap;
+    color: #333;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .site-header h1 .avatar {
