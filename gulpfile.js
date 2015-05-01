@@ -5,18 +5,18 @@ var basePaths = {
 };
 var paths = {
   scripts: {
-    src: basePaths.src + 'js/',
-    dest: basePaths.dest + 'js/min/'
+    src: basePaths.src + 'scripts/',
+    dest: basePaths.dest + 'js/'
   },
   styles: {
     src: basePaths.src + 'styles/',
-    dest: basePaths.dest + 'css/min/'
+    dest: basePaths.dest + 'css/'
   },
 };
 
 var appFiles = {
   styles: [ paths.styles.src + '**/*.scss' ],
-  scripts: [ paths.scripts.src + 'scripts.js' ]
+  scripts: [ paths.scripts.src + '**/*.js' ]
 };
 
 var vendorFiles = {
