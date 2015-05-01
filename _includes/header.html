@@ -4,10 +4,10 @@
 / /_/ / |/ /  __/ /  / /_/ /  / /_/ /  __/
 \____/|___/\___/_/   \__/_/   \__,_/\___/
 
- *************************************
+ --------------------------------------
  * GitHub：https://github.com/overtrue
  * weibo：http://weibo.com/44294631
- *************************************
+ --------------------------------------
  -->
 <!DOCTYPE html>
 <html lang="zh-CN" prefix="og: http://ogp.me/ns#">
@@ -72,15 +72,13 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <nav class="site-header-nav" role="navigation" data-pjax="">
-                <a href="#" class="selected site-header-nav-item">Home</a>
-                <a href="#" class="site-header-nav-item">Projects</a>
-                <a href="#" class="site-header-nav-item">GitHub</a>
-                <a href="#" class="site-header-nav-item">Weibo</a>
-                <a href="#" class="site-header-nav-item">About</a>
+            <nav class="site-header-nav" role="navigation">
+                {% for nav in site.navs %}
+                <a href="{{ nav.href }}" class="{% page.menu == nav.label %} selected {% endif %} site-header-nav-item" target="{{ nav.target | default: _self }}" title="{{ nav.label }}">{{ nav.label }}</a>
+                {% endfor %}
             </nav>
 
-            <h1><span class="octicon octicon-mark-github"></span> overtrue</h1>
+            <h1><a href="/" title="{{ site.name }}"><span class="octicon octicon-mark-github"></span> {{ site.name }}</a></h1>
         </div>
     </header>
     <!-- / header -->
