@@ -24,6 +24,7 @@
     </footer>
     <!-- / footer -->
     <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/sns.js"></script>
     <script src="/assets/js/highlight.pack.js"></script>
     <script src="/assets/js/emojify.min.js"></script>
     <script src="/assets/js/geopattern.js"></script>
@@ -36,6 +37,13 @@
         $('.geopattern').each(function(){
           $(this).geopattern($(this).data('pattern'));
         });
+
+        // share
+        SNS.init({});
+        $('.sns-share i').click(function(){
+            SNS.share($(this).data('id'));
+        });
+
       });
     </script>
     <div style="display:none">
