@@ -22,7 +22,7 @@ menu: open-source
         </a>
         <p class="collection-card-body">[description]</p>
         <div class="collection-card-meta">
-                <span class="meta-info tooltipped tooltipped-n [languageClass]" aria-label="[language] project">[language]</span>
+                <span class="meta-info tooltipped tooltipped-n [language]" aria-label="[language] project">[language]</span>
                 <span class="meta-info tooltipped tooltipped-n" aria-label="[stars] stars">
                     <span class="octicon octicon-star"></span> [stars]</span>
                 <span class="meta-info tooltipped tooltipped-n" aria-label="[forks] forks">
@@ -113,29 +113,15 @@ menu: open-source
                 repo.homepage = 'http://' + repo.homepage;
               }
 
-              item = {
-                url: repo.html_url,
-                name: repo.name,
-                language: repo.language,
-                languageClass: repo.languageClass,
-                description: repo.description,
-                stars: repo.stargazers_count ? repo.stargazers_count : 0,
-                forks: repo.forks_count ? repo.forks_count : 0,
-                avatar: null,
-                updated_at: repo.updated_at,
-                homepage: repo.homepage
-              };
-
-              items.push(item);
+              items.push(repo);
             });
 
             // Sort by stars
-            console.log(items.sort(function(a,b) {
+            items.sort(function(a,b) {
               if (a.stars < b.stars) return 1;
               if (b.stars < a.stars) return -1;
               return 0;
-            }));
-            console.log(items);
+            });
 
             // Create handlebars.js data
             data = { items: items };
