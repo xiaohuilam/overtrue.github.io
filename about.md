@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: 关于
 menu: About
 ---
