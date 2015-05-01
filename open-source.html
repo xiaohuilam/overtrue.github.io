@@ -45,7 +45,7 @@ menu: open-source
       language: "{{repo.language}}",
       stars: {{repo.stargazers_count}},
       forks: {{repo.forks_count}},
-      fork: {{repo.fork}}
+      fork: {{repo.fork}},
       updated_at: "{{ repo.updated_at | date: "%F" }}"
     };
     repos.push(repo);
