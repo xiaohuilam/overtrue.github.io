@@ -130,11 +130,11 @@ menu: open-source
             });
 
             // Sort by stars
-            items.sort(function(a,b) {
+            console.log(items.sort(function(a,b) {
               if (a.stars < b.stars) return 1;
               if (b.stars < a.stars) return -1;
               return 0;
-            });
+            }));
             console.log(items);
 
             // Create handlebars.js data
