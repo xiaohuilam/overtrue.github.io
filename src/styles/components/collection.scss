@@ -1,0 +1,188 @@
+
+.collection-head {
+    height: 225px;
+    &.small {
+        height: 120px;
+        .collection-title {
+            height: 120px;
+            h1.collection-header {
+                font-size:30px;
+            }
+        }
+    }
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background: #555 url(/images/modules/home/octicons-bg.png) center repeat;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    color: #fff;
+
+    .collection-title {
+        display: table-cell;
+        height: 225px;
+        vertical-align: middle
+    }
+
+    .collection-info {
+        margin: 0;
+        .meta-info {
+            margin-right: 15px
+        }
+        .avatar {
+            background-color: rgba(255,255,255,0.7);
+            border: 1px solid rgba(255,255,255,0.7)
+        }
+    }
+
+    .collection-head .container {
+        position: relative
+    }
+
+    .draft-tag {
+        position: absolute;
+        top: 0;
+        left: 0
+    }
+
+    .collection-header {
+        margin-top: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 45px;
+        font-weight: normal
+    }
+
+    .collection-description {
+        position: relative;
+        font-size: 16px
+    }
+}
+
+.collection-page {
+     .collection-info {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        color: #999
+    }
+
+    .column.main {
+        margin-right: 260px !important
+    }
+
+    .column.sidebar {
+        width: 240px
+    }
+
+    .other-content {
+        padding: 20px 0 20px 20px;
+        border-left: 1px solid #f1f1f1;
+
+        .subnav-search {
+            margin-left: 0
+        }
+
+        input.subnav-search-input {
+            width: 100%
+        }
+    }
+
+    .other-content-title {
+        margin-top: 40px
+    }
+
+    .other-content-title:first-child {
+        margin-top: 0
+    }
+}
+
+
+
+.side-collection-list {
+    margin: 0;
+    list-style-type: none
+}
+
+.side-collection-link {
+    display: table;
+    width: 100%;
+    height: 100px;
+    color: #fff
+}
+
+.side-collection-item-title {
+    font-size: 16px;
+    font-weight: 100
+}
+
+.side-collection-image {
+    background: #555 url(/images/modules/home/octicons-bg.png) center repeat;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    color: #fff;
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 3px
+}
+
+.side-collection-list-item {
+    margin-bottom: 20px
+}
+
+.collection-tools {
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+
+    .edit-link {
+        color: #333
+    }
+
+    .edit-link:hover {
+        color: #4183c4;
+        cursor: pointer
+    }
+
+    .octicon {
+        margin-right: 5px
+    }
+
+    .select-menu-button {
+        position: relative;
+        display: inline-block;
+        color: #333;
+
+        :hover {
+            color: #4183c4;
+            cursor: pointer
+        }
+    }
+}
+
+.collection-tool {
+    margin-left: 20px
+}
+
+.collection-search-results em {
+    padding: 0.1em;
+    background-color: #faffa6
+}
+
+.collection-search-result {
+    margin-bottom: 40px;
+    list-style-type: none
+}
+
+.collection-search-result-title {
+    margin-top: 0
+}
+
+.collection-search-page .search-results-info {
+    line-height: 33px;
+    float: right;
+    margin-left: 10px;
+    font-size: 15px
+}
