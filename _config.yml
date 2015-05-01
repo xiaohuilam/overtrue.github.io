@@ -8,7 +8,7 @@ keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,overtrue,P
 # baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 url: http://overtrue.me
-baseurl:  ""
+baseurl:  "/"
 domain:    overtrue.me
 permalink:     /articles/:categories/:title/
 paginate_path: 'page:num'
