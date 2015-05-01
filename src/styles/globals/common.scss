@@ -1,7 +1,7 @@
 @import "../../bower_components/primer-css/scss/primer";
 
 body {
-    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+    font-family: Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     word-wrap: break-word;
@@ -207,3 +207,9 @@ body {
 .site-footer-links li+li {
     margin-left: 10px
 }
+
+/* sns share */
+.sns-share {padding: 10px 0;}
+.sns-share i {display: inline-block; margin-right:6px;}
+.sns-share i svg {display: inline-block; width: 32px; height: 32px; fill: #666; cursor: pointer;}
+.sns-share i svg:hover {fill:#1abc9c;}
