@@ -31,7 +31,12 @@
 .repo-list-name {
     margin: 0 0 8px;
     font-size: 20px;
-    line-height: 1.2
+    line-height: 1.2;
+    font-weight: 400;
+    &:hover {
+        text-decoration:none;
+        color: #4169E1;
+    }
 }
 
 .repo-list-name .prefix,.repo-list-name .slash {
