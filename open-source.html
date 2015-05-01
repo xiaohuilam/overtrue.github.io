@@ -46,7 +46,7 @@ menu: open-source
       stars: {{repo.stargazers_count}},
       forks: {{repo.forks_count}},
       fork: {{repo.fork}}
-      updated_at: {{ timeago repo.updated_at }}
+      updated_at: {{ repo.updated_at | date | timeago }}
     };
     repos.push(repo);
   {% endfor %}
