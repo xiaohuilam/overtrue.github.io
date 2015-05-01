@@ -1,16 +1,17 @@
 # Site settings
-title: overtrue
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: overtrue - 安正超博客
+email: anzhengchao@gmail.com
+description: 安正超，网名overtrue，PHP工程师，从事web相关的开发工作。开源爱好者，GitHub:https://github.com/overtrue。
+keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,overtrue,Pinyin,汉字转拼音
 
 # permalink: /articles/:categories/:title/
 # baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
-
+url: http://overtrue.me
+baseurl:  ""
 domain:    overtrue.me
+permalink:     /articles/:categories/:title/
+paginate_path: 'page:num'
 paginate:   10
 
 # Build settings
@@ -21,3 +22,6 @@ disqus:
 
 google:
     analytics_id: UA-55452630-1
+
+timezone:    PRC
+encoding:    UTF-8

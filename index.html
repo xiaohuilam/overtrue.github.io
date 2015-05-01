@@ -1,23 +1,24 @@
 ---
-layout: default
+layout: page
+title: 安正超 - overtrue
+menu: blog
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="post-list">
+    <ul>
+        {% for post in site.posts %}
+        <li class="block">
+            {% if post.image %}
+            <a href="{{ site.url }}{{ post.url }}" class="post-image"><img src="post.image"></a>
+            {% endif %}
+            <div class="block-content">
+                <h3 class="block-title">
+                    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                </h3>
+                <div class="block-snippet">{{ post.excerpt | strip_html | strip }} <a class="readmore" href="{{ site.url }}{{ page.permalink }}">READ MORE</a></div>
+                <small class="post-meta-wrap"><time><i class="icon ion-ios7-calendar-outline"></i>{{ post.date | date: "%Y/%m/%d" }}</time></small>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </div>

@@ -1,4 +1,12 @@
 <!--
+<<<<<<< HEAD
+=======
+{% assign keywords = page.keywords %}
+{% assign description = page.excerpt %}
+{% if keywords == '' %}{% assign keywords = site.keywords %}{%endif%}
+{% if description == '' %}{% assign description = site.description %}{%endif%}
+                        __
+>>>>>>> 9c70bbb078116f54c6fd80e1c10e289b58616345
   ____ _   _____  _____/ /________  _____
  / __ \ | / / _ \/ ___/ __/ ___/ / / / _ \
 / /_/ / |/ /  __/ /  / /_/ /  / /_/ /  __/
@@ -10,6 +18,7 @@
  *************************************
  -->
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="zh-CN" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
@@ -84,3 +93,31 @@
         </div>
     </header>
     <!-- / header -->
+=======
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="keywords" content="{{ keywords | strip_html | strip}}">
+    <meta name="description" content="{{ description | strip_html | strip}}">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/typo.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/js/highlight/styles/github.css">
+    <script src="/assets/js/jquery-2.1.1.min.js"></script>
+</head>
+<body class="typo">
+    <div class="metabar">
+        <div class="sidebar-switch "><i class="ion-navicon"></i></div>
+    </div>
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="/"><i class="ion-ios7-home"></i>首页</a></li>
+            <li><a href="/"><i class="ion-ios7-paper"></i>博客</a></li>
+            <li><a href="/open-source"><i class="ion-social-github"></i>开源</a></li>
+            <li><a target="_blank" href="https://github.com/overtrue"><i class="ion-social-github"></i>GitHub</a></li>
+            <li><a href="/about"><i class="ion-ios7-person"></i>关于</a></li>
+        </ul>
+    </div>
+>>>>>>> 9c70bbb078116f54c6fd80e1c10e289b58616345

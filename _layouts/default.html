@@ -1,8 +1,8 @@
 {% include header.html %}
-  <div class="page-content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </div>
-
+<header class="page-title">
+    <h1>{{ page.title }}</h1>
+</header>
+<article class="content signle-column bg-white">
+    {{ content }}
+</article>
 {% include footer.html %}
