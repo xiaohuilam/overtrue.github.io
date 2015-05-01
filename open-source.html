@@ -34,7 +34,7 @@ menu: open-source
     </li>
 </div>
 <script>
-  var repos = {{ site.github.public_repositories |jsonfy }};
+  var repos = {{ site.github.public_repositories |jsonify }};
 </script>
 <script>
     if (!Array.prototype.indexOf) {
