@@ -23,7 +23,7 @@ gems:
   - jemoji
   - jekyll-mentions
   - jekyll-sitemap
-  - jekyll-timeago
+  # - jekyll-timeago
 
 disqus:
   id: overtrueme
