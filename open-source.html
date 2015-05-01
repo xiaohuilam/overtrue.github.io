@@ -74,7 +74,7 @@ menu: open-source
         $.each(data, function(index, repo) {
             for (i in repo) {
                 var property = repo[i];
-
+console.log(i);
                 ul += source.replace(new RegExp('/['+i+']/g'), property);
             }
         });
