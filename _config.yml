@@ -28,7 +28,7 @@ timezone:    PRC
 encoding:    UTF-8
 
 # navigation
-nav:
+navs:
   -
     href: /
     label: Home
