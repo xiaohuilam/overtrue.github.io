@@ -71,7 +71,7 @@ menu: open-source
         var source = $('#repoTemplate').html();
         var ul = '';
 
-        $.each(data, function(index, repo) {
+        $.each(data.items, function(index, repo) {
             for (i in repo) {
                 var property = repo[i];
 console.log(i);
