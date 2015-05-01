@@ -67,7 +67,7 @@ menu: open-source
       };
     }
 
-    function template (data, $template) {
+    function template (data) {
         var source = $('#repoTemplate').html();
         var ul = [];
 
@@ -135,6 +135,6 @@ menu: open-source
             data = { items: items };
 
             // Append handlebars templates
-            repoList.addClass('is-loaded').append(template(data, source));
+            repoList.addClass('is-loaded').append(template(data));
     });
 </script>
