@@ -46,10 +46,12 @@ navs:
   -
     href: https://github.com/overtrue
     label: GitHub
+    target: _blank
 
   -
     href: http://weibo.com/44294631
     label: Weibo
+    target: _blank
 
   -
     href: /about
