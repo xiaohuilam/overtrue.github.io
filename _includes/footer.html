@@ -23,9 +23,16 @@
         </div>
     </footer>
     <!-- / footer -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/highlight.pack.js"></script>
+    <script src="/assets/js/emojify.min.js"></script>
     <script src="/assets/js/geopattern.js"></script>
     <script>
       jQuery(document).ready(function($) {
+        //emojify
+        emojify.run();
+
+        // geopattern
         $('.geopattern').each(function(){
           $(this).geopattern($(this).data('pattern'));
         });
