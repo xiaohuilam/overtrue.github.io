@@ -30,6 +30,17 @@
     <script src="/assets/js/geopattern.js"></script>
     <script>
       jQuery(document).ready(function($) {
+        emojify.setConfig({
+            only_crawl_id    : null,            // Use to restrict where emojify.js applies
+            img_dir          : '/assets/images/emoji',  // Directory for emoji images
+            ignored_tags     : {                // Ignore the following tags
+                'SCRIPT'  : 1,
+                'TEXTAREA': 1,
+                'A'       : 1,
+                'PRE'     : 1,
+                'CODE'    : 1
+            }
+        });
         //emojify
         emojify.run();
 
