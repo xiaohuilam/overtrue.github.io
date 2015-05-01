@@ -44,14 +44,3 @@ menu: About
 | Markdown | ★★★★★ |
 | C | ★★★☆☆ |
 | Photoshop | ★★★★☆ |
-
-
-
-## 开源项目
-- [Pinyin](https://github.com/overtrue/pinyin)  基于CC-CEDICT词典的中文转拼音工具，支持多音字转换；
-- [Writor](https://github.com/overtrue/writor)  基于Laravel博客开发的博客系统；
-- [Rester](https://github.com/overtrue/Rester)  RESTful API框架，基于Slim+Eloquent；
-- [Validator.js](https://github.com/overtrue/Validator.js)   支持Nodejs与浏览器端的js验证工具；
-- [Translator](https://github.com/overtrue/Translator) PHP多语言支持工具；
-
-更多： [http://overtrue.me](http://overtrue.me)
