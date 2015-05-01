@@ -1,10 +1,10 @@
 
 .collection-head {
-    height: 225px;
+    padding:40px;
     &.small {
-        height: 120px;
+        padding:20px;
         .collection-title {
-            height: 120px;
+            padding: 10px 0;
             h1.collection-header {
                 font-size:30px;
             }
@@ -19,7 +19,7 @@
 
     .collection-title {
         display: table-cell;
-        height: 225px;
+        padding: 20px 0;
         vertical-align: middle
     }
 
