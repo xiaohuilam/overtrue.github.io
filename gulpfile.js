@@ -4,10 +4,6 @@ var basePaths = {
   bower: 'bower_components/'
 };
 var paths = {
-  images: {
-    src: basePaths.src + 'images/',
-    dest: basePaths.dest + 'images/min/'
-  },
   scripts: {
     src: basePaths.src + 'js/',
     dest: basePaths.dest + 'js/min/'
@@ -20,7 +16,6 @@ var paths = {
 
 var appFiles = {
   styles: [ paths.styles.src + '**/*.scss' ],
-  images: [ paths.images.src + '**/*' ],
   scripts: [ paths.scripts.src + 'scripts.js' ]
 };
 
@@ -29,9 +24,6 @@ var vendorFiles = {
           basePaths.bower + 'emojify/dist/css/sprites/emojify.min.css',
           basePaths.bower + 'highlightjs/styles/github.css',
   ],
-
-  images: [],
-
   scripts: [
           basePaths.bower + 'jquery/dist/jquery.min.js',
           basePaths.bower + 'highlightjs/highlight.pack.js',
@@ -106,16 +98,8 @@ gulp.task('scripts', function(){
     .pipe(gulp.dest(paths.scripts.dest));
 });
 
-gulp.task('images', function() {
-  clean(paths.images.dest);
-  return gulp.src(appFiles.images.concat(vendorFiles.images))
-    // Pass in options to the task
-    .pipe(plugins.imagemin({optimizationLevel: 5}))
-    .pipe(plugins.notify())
-    .pipe(gulp.dest(paths.images.dest));
-});
 
-gulp.task('watch', ['css', 'scripts', 'images'], function(){
+gulp.task('watch', ['css', 'scripts'], function(){
   gulp.watch(appFiles.styles, ['css']).on('change', function(evt) {
     changeEvent(evt);
   });
@@ -125,4 +109,4 @@ gulp.task('watch', ['css', 'scripts', 'images'], function(){
   });
 });
 
-gulp.task('default', ['css', 'scripts', 'images']);
+gulp.task('default', ['css', 'scripts']);
