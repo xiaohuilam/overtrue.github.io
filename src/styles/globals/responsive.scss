@@ -7,6 +7,11 @@
 
 
 @media (max-width: 34em) {
+    .mobile-block {
+        display:block;
+        float:none;
+    }
+
     .column {
         width: 100% !important;
         float: none;
