@@ -10,7 +10,7 @@
 }
 
 
-@media (max-width: 40em) {
+@media (max-width: 50em) {
     .mobile-block {
         display:block;
         float:none;
@@ -55,6 +55,8 @@
             padding: 0 2px;
             margin-left:0;
             font-size: 1rem;
+            width: 20%;
+            float: left;
             display:inline-block;
         }
     }
