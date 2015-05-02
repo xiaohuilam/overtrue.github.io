@@ -204,7 +204,8 @@
     list-style-type: none;
     background: #f7f7f7;
     border: 1px solid #ddd;
-    border-radius: 3px
+    border-radius: 3px;
+    overflow:hidden;
 }
 
 .collection-card .draft-tag {
