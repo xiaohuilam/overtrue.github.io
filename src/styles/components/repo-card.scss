@@ -30,9 +30,14 @@
     vertical-align: middle
 }
 
+.repo-card-body-wrapper {
+    display:table;
+}
+
 .repo-card-body {
     padding: 0 15px;
     margin-top: 0;
+    display:table-cell;
     overflow: hidden;
     font-size: 12px;
     line-height: 1.5em;
@@ -46,6 +51,7 @@
     -webkit-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
     color:#fff;
+    text-align:center;
 }
 
 .repo-card-image {
