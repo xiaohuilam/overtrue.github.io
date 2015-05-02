@@ -147,9 +147,9 @@ body {
 
 .site-header-nav-item {
     display: inline-block;
-    padding: 6px 10px 21px;
+    padding: 6px 10px 15px;
     margin-left: 1.25rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #777
 }
 
@@ -160,6 +160,7 @@ body {
 
 .site-header-nav-item.selected {
     color: #333;
+    padding: 6px 10px 13px;
     border-bottom: 2px solid #d26911
 }
 
