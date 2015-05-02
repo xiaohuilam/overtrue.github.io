@@ -46,7 +46,7 @@
     color: #666
 }
 
-.mini-repo-list-item .repo-and-owner {
+.mini-repo-list-item .repo-and-owner.css-truncate-target, .mini-repo-list-item .owner.css-truncate-target{
     max-width: 95%;
 }
 
