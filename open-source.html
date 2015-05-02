@@ -11,7 +11,10 @@ menu: Open-Source
     </header>
     <div class="repo-list">
         <ul class="collection-listing clearfix">
-
+          <div class="blankslate clean-background">
+            <h3><span class="octicon octicon-globe"></span> Loading ...</h3>
+            <p>Loading, please wait a moment.</p>
+          </div>
         </ul>
     </div>
 </section>
@@ -127,7 +130,7 @@ menu: Open-Source
             data = { items: items };
 
             // Append handlebars templates
-            repoList.addClass('is-loaded').append(template(data));
+            repoList.html('').addClass('is-loaded').append(template(data));
 
             $('.repoCount').html(repoCount);
     });
