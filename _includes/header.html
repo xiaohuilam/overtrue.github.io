@@ -46,7 +46,7 @@
       {% if page.excerpt %}
     <meta name="description" content="{{ page.excerpt }}">
     <meta name="og:description" content="{{ page.excerpt }}">
-    {% elseif page.description %}
+      {% else if page.description %}
     <meta name="description" content="{{ page.description }}">
     <meta name="og:description" content="{{ page.description }}">
       {% else if content %}
