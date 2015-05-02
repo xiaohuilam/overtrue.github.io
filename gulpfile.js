@@ -67,7 +67,6 @@ var clean = function(path, cb) {
 };
 
 gulp.task('css', function(){
-  clean(paths.styles.dest);
   // app css
   return gulp.src(vendorFiles.styles.concat(appFiles.styles))
     .pipe(plugins.rubySass({
@@ -89,7 +88,6 @@ gulp.task('css', function(){
 
 gulp.task('scripts', function(){
 
-  clean(paths.scripts.dest);
   return gulp.src(vendorFiles.scripts.concat(appFiles.scripts))
     // .pipe(plugins.concat('app.js'))
     .pipe(isProduction ? plugins.uglify() : gutil.noop())
@@ -100,6 +98,8 @@ gulp.task('scripts', function(){
 
 
 gulp.task('watch', ['css', 'scripts'], function(){
+  clean(paths.styles.dest);
+  clean(paths.scripts.dest);
   gulp.watch(appFiles.styles, ['css']).on('change', function(evt) {
     changeEvent(evt);
   });
