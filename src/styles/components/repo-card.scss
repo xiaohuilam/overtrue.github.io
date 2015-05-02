@@ -32,10 +32,15 @@
 
 .repo-card-body-wrapper {
     display:table;
+
+    &:hover .repo-card-body {
+        -webkit-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+    }
 }
 
 .repo-card-body {
-    padding: 0 15px;
+    padding: 10px;
     margin-top: 0;
     display:table-cell;
     overflow: hidden;
@@ -48,8 +53,6 @@
     left:0;
     background:rgba(0,0,0,0.6);
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
     color:#fff;
     text-align:center;
 }
