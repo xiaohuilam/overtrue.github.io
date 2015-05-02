@@ -32,13 +32,20 @@
 
 .repo-card-body {
     padding: 0 15px;
-    margin: 10px 0;
     margin-top: 0;
     overflow: hidden;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.5em;
     position:absolute;
     bottom:0;
+    top:0;
+    right:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    color:#fff;
 }
 
 .repo-card-image {
@@ -56,10 +63,10 @@
 }
 
 .repo-card-meta {
-    padding: 0 15px;
+    padding: 0 8px;
     margin-top: 5px;
-    margin-bottom: 15px;
-    color: #777;
+    margin-bottom: 5px;
+    color: #fff;
     font-size: 13px;
 }
 
