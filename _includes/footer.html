@@ -1,24 +1,25 @@
     <footer class="container">
         <div class="site-footer" role="contentinfo">
-            <ul class="site-footer-links right">
-                <li>
-                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
-                </li>
-            </ul>
+            <div class="copyright left">
+                    © 2015
+                    <span title="overtrue.me">overtrue.me</span>
+            </div>
+
 
             <a href="/" aria-label="Homepage">
                 <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
             </a>
             <ul class="site-footer-links">
-                <li>
-                    © 2015
-                    <span title="overtrue.me">overtrue.me</span>
-                </li>
                 {% for nav in site.navs %}
                 <li>
                     <a href="{{ nav.href }}" title="{{ nav.label }}" target="{{ nav.target | default: _self }}">{{ nav.label }}</a>
                 </li>
                 {% endfor %}
+            </ul>
+            <ul class="site-footer-links right">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
             </ul>
         </div>
     </footer>
