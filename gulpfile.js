@@ -98,8 +98,6 @@ gulp.task('scripts', function(){
 
 
 gulp.task('watch', ['css', 'scripts'], function(){
-  clean(paths.styles.dest);
-  clean(paths.scripts.dest);
   gulp.watch(appFiles.styles, ['css']).on('change', function(evt) {
     changeEvent(evt);
   });
