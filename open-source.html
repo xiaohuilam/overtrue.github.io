@@ -91,7 +91,7 @@ menu: Open-Source
     }
 
     $(document).ready(function(){
-        var $ignoreForks = true;
+        var ignoreForks = true;
         var repoList = $('.repo-list ul');
          var o = this,
             repoCount = 0;
@@ -102,7 +102,7 @@ menu: Open-Source
 
         $.each(repos, function (i, repo) {
             // Ignore forked repos
-            if (o.$ignoreForks && repo.fork) {
+            if (ignoreForks && repo.fork) {
                 return;
             }
 
