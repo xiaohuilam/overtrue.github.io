@@ -28,7 +28,10 @@
     display: block;
     padding: 6px 64px 6px 30px;
     font-size: 14px;
-    border-top: 1px solid #e5e5e5
+    border-top: 1px solid #e5e5e5;
+    &.nostars {
+        padding: 6px 6px 6px 30px;
+    }
 }
 
 .mini-repo-list-item:hover {
