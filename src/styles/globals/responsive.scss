@@ -5,6 +5,10 @@
   padding-right: 20px;
 }
 
+.mobile-visible {
+    display:none;
+}
+
 
 @media (max-width: 34em) {
     .mobile-block {
@@ -14,6 +18,10 @@
 
     .mobile-hidden {
         display:none;
+    }
+
+    .mobile-visible {
+        display:inline-block;
     }
 
     .mobile-md-section {
