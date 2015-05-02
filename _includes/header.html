@@ -73,13 +73,12 @@
 <body>
     <header class="site-header">
         <div class="container">
+            <h1><a href="/" title="{{ site.name }}"><span class="octicon octicon-mark-github"></span> {{ site.name }}</a></h1>
             <nav class="site-header-nav" role="navigation">
                 {% for nav in site.navs %}
                 <a href="{{ nav.href }}" class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item" target="{{ nav.target | default: _self }}" title="{{ nav.label }}">{{ nav.label }}</a>
                 {% endfor %}
             </nav>
-
-            <h1><a href="/" title="{{ site.name }}"><span class="octicon octicon-mark-github"></span> {{ site.name }}</a></h1>
         </div>
     </header>
     <!-- / header -->
