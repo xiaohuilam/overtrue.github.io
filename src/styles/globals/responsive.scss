@@ -72,6 +72,10 @@
         width:100.5%;
     }
 
+    .mini-repo-list-item .owner, .mini-repo-list-item .repo-and-owner {
+        max-width: 300px;
+    }
+
     .markdown-body h1 {
         font-size: 2rem;
     }
