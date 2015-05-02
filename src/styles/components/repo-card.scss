@@ -6,6 +6,16 @@
     background: #f7f7f7;
     border-radius: 3px;
     overflow:hidden;
+
+    &:hover {
+        .repo-card-title {
+            text-shadow: 0 0 8px rgba(255, 252, 252, 1);
+            color: rgba(0,0,0,0);
+        }
+        .repo-card-body {
+            opacity: 1;
+        }
+    }
 }
 
 .repo-card .draft-tag {
@@ -32,15 +42,6 @@
 
 .repo-card-body-wrapper {
     display:table;
-    &:hover {
-        .repo-card-title {
-            text-shadow: 0 0 8px rgba(255, 252, 252, 1);
-            color: rgba(0,0,0,0);
-        }
-        .repo-card-body {
-            opacity: 1;
-        }
-    }
 }
 
 .repo-card-body {
