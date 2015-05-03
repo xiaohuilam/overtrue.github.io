@@ -1,5 +1,7 @@
 <h3>Popular Repositories</h3>
 {% for repo in site.public_repositories %}
+    {{ repo.name }}
+    {{ site.popular_repos }}
     {% if site.popular_repos contains repo.name %}
 
     <section class="repo-card">
