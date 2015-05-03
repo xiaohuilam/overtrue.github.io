@@ -6,14 +6,14 @@ description: 开源改变世界。我是一个热衷于开源的人，也多多�
 menu: Open-Source
 ---
 
+{% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
 <section class="container">
     <header class="text-center">
         <h1>开源项目</h1>
-        <p class="lead">共 <span class="repoCount">0</span> 个开源项目</p>
+        <p class="lead">共 <span class="repoCount">{{ repos | size }}</span> 个开源项目</p>
     </header>
     <div class="repo-list">
         <ul class="collection-listing clearfix">
-          {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
             {% for repo in repos %}
             {% if repo.fork %}
               {% continue %}
