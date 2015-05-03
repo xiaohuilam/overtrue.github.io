@@ -1,4 +1,5 @@
 <h3>Popular Repositories</h3>
+{{site.github.public_repositories | sort: "stargazers_count"  }}
 {% for repo in site.github.public_repositories | sort: "stargazers_count" %}
     {% if site.popular_repos contains repo.name %}
 
