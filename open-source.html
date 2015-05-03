@@ -42,8 +42,8 @@ menu: Open-Source
 </div>
 <script>
   var repos = [];
-
-  {% for repo in site.github.public_repositories | sort: "stargazers_count" %}
+  {% assign repos = site.github.public_repositories | sort: "stargazers_count" %}
+  {% for repo in repos %}
     var repo = {
       name: "{{repo.name}}",
       url: "{{repo.html_url}}",
