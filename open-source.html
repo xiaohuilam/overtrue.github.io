@@ -13,127 +13,27 @@ menu: Open-Source
     </header>
     <div class="repo-list">
         <ul class="collection-listing clearfix">
-          <div class="blankslate clean-background">
-            <h3><span class="octicon octicon-globe"></span> Loading ...</h3>
-            <p>Loading, please wait a moment.</p>
-          </div>
+          {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
+            {% for repo in repos %}
+              <li class="collection-card">
+                  <a href="{{ repo.html_url }}" class="collection-card-image geopattern" data-pattern-id="{{ repo.name }}">
+                      <h3 class="collection-card-title">{{ repo.name }}</h3>
+                  </a>
+                  <p class="collection-card-body">{{ repo.description }}</p>
+                  <div class="collection-card-meta">
+                          <span class="meta-info tooltipped tooltipped-n {{ repo.language }}" aria-label="{{ repo.language }} project">{{ repo.language }}</span>
+                          <span class="meta-info tooltipped tooltipped-n" aria-label="{{ repo.stargazers_count }} stars">
+                              <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}</span>
+                          <span class="meta-info tooltipped tooltipped-n" aria-label="{{ repo.forks_count }} forks">
+                              <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
+                          </span>
+                          <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：{{ repo.updated_at | date: "%F" }}">
+                              <span class="octicon octicon-clock"></span>
+                              <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at | date: "%F" }}"> {{ repo.updated_at | date: "%F" }}</time>
+                          </span>
+                  </div>
+              </li>
+          {% endfor %}
         </ul>
     </div>
 </section>
-<div id="repoTemplate" class="hidden">
-    <li class="collection-card">
-        <a href="[url]" class="collection-card-image geopattern" data-pattern-id="[name]">
-            <h3 class="collection-card-title">[name]</h3>
-        </a>
-        <p class="collection-card-body">[description]</p>
-        <div class="collection-card-meta">
-                <span class="meta-info tooltipped tooltipped-n [language]" aria-label="[language] project">[language]</span>
-                <span class="meta-info tooltipped tooltipped-n" aria-label="[stars] stars">
-                    <span class="octicon octicon-star"></span> [stars]</span>
-                <span class="meta-info tooltipped tooltipped-n" aria-label="[forks] forks">
-                    <span class="octicon octicon-git-branch"></span> [forks]
-                </span>
-                <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：[updated_at]">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="[updated_at]" title="[updated_at]"> [updated_at]</time>
-                </span>
-        </div>
-    </li>
-</div>
-<script>
-  var repos = [];
-  {% assign repos = site.github.public_repositories | sort: "stargazers_count" %}
-  {% for repo in repos %}
-    var repo = {
-      name: "{{repo.name}}",
-      url: "{{repo.html_url}}",
-      description: "{{repo.description}}",
-      homepage: "{{repo.homepage}}",
-      language: "{{repo.language}}",
-      stars: {{repo.stargazers_count}},
-      forks: {{repo.forks_count}},
-      fork: {{repo.fork}},
-      updated_at: "{{ repo.updated_at | date: "%F" }}"
-    };
-    repos.push(repo);
-  {% endfor %}
-</script>
-<script>
-    if (!Array.prototype.indexOf) {
-      Array.prototype.indexOf = function(elt /*, from*/) {
-        var len = this.length >>> 0,
-            from = Number(arguments[1]) || 0;
-        from = (from < 0) ? Math.ceil(from) : Math.floor(from);
-        if (from < 0)
-          from += len;
-
-        for (; from < len; from++) {
-          if (from in this && this[from] === elt)
-            return from;
-        }
-        return -1;
-      };
-    }
-
-    function template (data) {
-        var source = $('#repoTemplate').html();
-        var ul = '';
-
-        $.each(data.items, function(index, repo) {
-            var t = source;
-            for (i in repo) {
-                var property = repo[i];
-                t = t.replace(new RegExp('\\['+i+'\\]', 'g'), property);
-            }
-
-            ul += t;
-        });
-
-        return ul;
-    }
-
-    $(document).ready(function(){
-        var ignoreForks = true;
-        var repoList = $('.repo-list ul');
-         var o = this,
-            repoCount = 0;
-
-        var items = [],
-            item = {},
-            data = {};
-
-        $.each(repos, function (i, repo) {
-            // Ignore forked repos
-            if (ignoreForks && repo.fork) {
-                return;
-            }
-
-            // Opt-in repos (name) and custom repos (full_name) only
-            repoCount = repoCount + 1;
-
-            repo.languageClass = (repo.language || '').toLowerCase();
-
-              // Make sure homepage URLs start with http. If not, add them
-              if (repo.homepage && repo.homepage.substring(0, 4) != "http") {
-                repo.homepage = 'http://' + repo.homepage;
-              }
-
-              items.push(repo);
-            });
-
-            // Sort by stars
-            items.sort(function(a,b) {
-              if (a.stars < b.stars) return 1;
-              if (b.stars < a.stars) return -1;
-              return 0;
-            });
-
-            // Create handlebars.js data
-            data = { items: items };
-
-            // Append handlebars templates
-            repoList.html('').addClass('is-loaded').append(template(data));
-
-            $('.repoCount').html(repoCount);
-    });
-</script>
