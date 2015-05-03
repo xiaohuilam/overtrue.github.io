@@ -16,7 +16,16 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-.pagination { padding:20px 0; }
+.pagination {
+    padding:20px 0;
+    a.active {
+        background:#337ab7;
+        border-color: #337ab7;
+        z-index: 2;
+        color: #fff;
+        cursor: default;
+    }
+}
 .text-center { text-align:center; }
 
 /*** header ***/
