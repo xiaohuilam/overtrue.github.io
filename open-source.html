@@ -15,6 +15,9 @@ menu: Open-Source
         <ul class="collection-listing clearfix">
           {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
             {% for repo in repos %}
+            {% if repo.fork %}
+              {% continue %}
+            {% endif %}
               <li class="collection-card">
                   <a href="{{ repo.html_url }}" class="collection-card-image geopattern" data-pattern-id="{{ repo.name }}">
                       <h3 class="collection-card-title">{{ repo.name }}</h3>
