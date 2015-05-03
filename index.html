@@ -52,51 +52,33 @@ menu: home
     </div>
 </section>
 <!-- /section.content -->
-<div class="pagination">
-  <ul>
+<div class="pagination text-align">
+  <div class="btn-group">
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <li>
-          <a href="/">&laquo;</a>
-        </li>
+          <a href="/" class="btn btn-outline">&laquo;</a>
       {% else %}
-        <li>
-          <a href="/page{{paginator.previous_page}}">&laquo;</a>
-        </li>
+          <a href="/page{{paginator.previous_page}}"  class="btn btn-outline">&laquo;</a>
       {% endif %}
     {% else %}
-      <li class="disabled">
-        <a href="#">&laquo;</a>
-      </li>
+        <a href="#" disabled class="btn btn-outline">&laquo;</a>
     {% endif %}
     {% if paginator.page == 1 %}
-      <li class="active">
-        <a href="#">1</a>
-      </li>
+        <a href="#" disabled class="btn btn-outline">1</a>
     {% else %}
-      <li>
-        <a href="/">1</a>
-      </li>
+        <a href="/"  class="btn btn-outline">1</a>
     {% endif %}
     {% for count in (2..paginator.total_pages) %}
       {% if count == paginator.page %}
-        <li class="active">
-          <a href="#">{{count}}</a>
-        </li>
+          <a href="#" disabled  class="btn btn-outline">{{count}}</a>
       {% else %}
-        <li>
-          <a href="/page{{count}}">{{count}}</a>
-        </li>
+          <a href="/page{{count}}"  class="btn btn-outline">{{count}}</a>
       {% endif %}
     {% endfor %}
     {% if paginator.next_page %}
-      <li>
-        <a href="/page{{paginator.next_page}}">&raquo;</a>
-      </li>
+        <a href="/page{{paginator.next_page}}"  class="btn btn-outline">&raquo;</a>
     {% else %}
-      <li class="disabled">
-        <a href="#">&raquo;</a>
-      </li>
+        <a href="#" disabled class="btn btn-outline">&raquo;</a>
     {% endif %}
-  </ul>
+    </div>
 </div>
