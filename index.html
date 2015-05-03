@@ -30,7 +30,7 @@ menu: home
     <div class="columns">
         <div class="column two-thirds" >
             <ol class="repo-list">
-                {% for post in posts %}
+                {% for post in paginator.posts %}
                 <li class="repo-list-item">
                     <h3 class="repo-list-name">
                         <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
