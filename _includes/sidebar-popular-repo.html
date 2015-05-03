@@ -1,9 +1,5 @@
 <h3>Popular Repositories</h3>
-{{ site.popular_repos }}
-{{ site.public_repositories }}
-{% for repo in site.public_repositories %}
-    {{ repo.name }}
-    {{ site.popular_repos }}
+{% for repo in site.github.public_repositories %}
     {% if site.popular_repos contains repo.name %}
 
     <section class="repo-card">
