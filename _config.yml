@@ -13,7 +13,7 @@ baseurl:  "/"
 domain:    overtrue.me
 permalink:     /articles/:categories/:title/
 paginate_path: 'page:num'
-paginate:   4
+paginate:   10
 
 
 # Build settings
