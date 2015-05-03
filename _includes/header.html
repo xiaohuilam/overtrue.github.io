@@ -42,17 +42,17 @@
       {% else %}
       {% assign keywords = site.keywords %}
       {% endif %}
-    <meta name="keywords" content="{{ keywords }}">
-    <meta name="og:keywords" content="{{ keywords }}">
+    <meta name="keywords" content="{{ keywords | strip_html | strip_newlines}}">
+    <meta name="og:keywords" content="{{ keywords | strip_html | strip_newlines}}">
       {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt }}">
-    <meta name="og:description" content="{{ page.excerpt }}">
+    <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines}}">
+    <meta name="og:description" content="{{ page.excerpt | strip_html | strip_newlines}}">
       {% else if page.description %}
-    <meta name="description" content="{{ page.description }}">
-    <meta name="og:description" content="{{ page.description }}">
+    <meta name="description" content="{{ page.description | strip_html | strip_newlines}}">
+    <meta name="og:description" content="{{ page.description | strip_html | strip_newlines}}">
       {% else if content %}
-    <meta name="description" content="{{ content | strip_html | truncatewords: 25 }}">
-    <meta name="og:description" content="{{ content | strip_html | truncatewords: 25 }}">
+    <meta name="description" content="{{ content | strip_html | strip_newlines | truncatewords: 100 }}">
+    <meta name="og:description" content="{{ content | strip_html | strip_newlines | truncatewords: 100 }}">
       {% endif %}
     {% else %}
     <meta name="keywords" content="{{ site.keywords }}">
