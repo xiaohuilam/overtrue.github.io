@@ -33,10 +33,10 @@ coderay:
 excerpt_separator: "\n\n"
 
 gems:
-  # - jemoji
+  - jemoji
   # - rouge
   # # - jekyll-mentions
-  # - jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-html-pipeline
 
 disqus:

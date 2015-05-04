@@ -1,4 +1,4 @@
 # # emoji
-# gem 'jemoji'
+gem 'jemoji'
 # # @xxx
 # gem 'jekyll-mentions'
