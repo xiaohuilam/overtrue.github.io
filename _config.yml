@@ -7,7 +7,7 @@ keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,overtrue,P
 url: http://overtrue.me
 baseurl:  "/"
 domain:    overtrue.me
-permalink:     /articles/:categories/:title/
+permalink:     /articles/:title/
 paginate_path: 'page:num'
 paginate:   10
 
