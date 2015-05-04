@@ -19,7 +19,7 @@ paginate:   10
 # Build settings
 future:      true
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 kramdown:
   input: GFM
   auto_ids: true
