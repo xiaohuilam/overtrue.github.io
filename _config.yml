@@ -18,17 +18,20 @@ paginate:   10
 
 # Build settings
 future:      true
+markdown: redcarpet2
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 # markdown: kramdown
-markdown: Redcarpet
-highlighter: rouge
-kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  syntax_highlighter: rouge
+# markdown: Redcarpet
+# highlighter: rouge
+# kramdown:
+#   input: GFM
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   smart_quotes: lsquo,rsquo,ldquo,rdquo
+#   syntax_highlighter: rouge
 # coderay:
 #   coderay_wrap: div
 #   coderay_line_numbers: nil
