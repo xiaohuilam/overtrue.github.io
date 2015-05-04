@@ -5,9 +5,6 @@ email: anzhengchao@gmail.com
 description: 安正超，网名overtrue，PHP工程师，从事web相关的开发工作。开源爱好者，GitHub:https://github.com/overtrue。
 keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,overtrue,Pinyin,汉字转拼音
 
-# permalink: /articles/:categories/:title/
-# baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
 url: http://overtrue.me
 baseurl:  "/"
 domain:    overtrue.me
