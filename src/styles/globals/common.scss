@@ -185,7 +185,11 @@ body {
     font-size: 12px;
     line-height: 1.5;
     color: #777;
-    border-top: 1px solid #eee
+    border-top: 1px solid #eee;
+
+    .copyright {
+        padding-right: 20px;
+    }
 }
 
 .site-footer:before {
