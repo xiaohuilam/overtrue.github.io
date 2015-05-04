@@ -22,9 +22,7 @@ menu: About
 
 ## keywords
 
-{% for keyword in site.skill_keywords %}
-<button class="btn btn-outline" type="button">{{ keyword }}</button>
-{% endfor %}
+{% for keyword in site.skill_keywords %}<button class="btn btn-outline" type="button">{{ keyword }}</button>{% endfor %}
 
 ### 综合技能
 
