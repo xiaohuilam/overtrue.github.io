@@ -11,6 +11,8 @@ permalink:     /articles/:title/
 paginate_path: 'page:num'
 paginate:   10
 
+source_code: https://github.com/overtrue/overtrue.github.io
+
 
 # Build settings
 markdown: kramdown
