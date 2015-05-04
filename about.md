@@ -21,8 +21,9 @@ menu: About
 - 东北财经大学公司管理专业 — 本科 2009 - 2012 （自考）
 
 ## keywords
-
+<div class="btn-inline">
 {% for keyword in site.skill_keywords %} <button class="btn btn-outline" type="button">{{ keyword }}</button> {% endfor %}
+</div>
 
 ### 综合技能
 
