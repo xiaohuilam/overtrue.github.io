@@ -18,7 +18,8 @@ paginate:   10
 
 # Build settings
 future:      true
-markdown: kramdown
+# markdown: kramdown
+markdown: redcarpet
 highlighter: rouge
 kramdown:
   input: GFM
