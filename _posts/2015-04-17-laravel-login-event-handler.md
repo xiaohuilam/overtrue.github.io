@@ -20,7 +20,7 @@ php artisan handler:event AuthLoginEventHandler
 ```
 
 `AuthLoginEventHandler` 是我们定义的名称，你可以随意命名(合理的)，它会创建 `app/Handlers/Events/AuthLoginEventHandler.php`:
-
+{% highlighter php %}
 ```php
 <?php namespace App\Handlers\Events;
 
@@ -51,6 +51,7 @@ class AuthLoginEventHandler {
     }
 }
 ```
+{% endhighlight %}
 
 ### 第二步：注册监听
 
