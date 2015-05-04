@@ -17,38 +17,28 @@ paginate:   10
 
 
 # Build settings
-future:      true
-markdown: redcarpet
-highlighter: pygments
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
-safe: true
-lsi: true
-# markdown: kramdown
-# markdown: Redcarpet
-# highlighter: rouge
-# kramdown:
-#   input: GFM
-#   auto_ids: true
-#   footnote_nr: 1
-#   entity_output: as_char
-#   toc_levels: 1..6
-#   smart_quotes: lsquo,rsquo,ldquo,rdquo
-#   syntax_highlighter: rouge
-# coderay:
-#   coderay_wrap: div
-#   coderay_line_numbers: nil
-#   coderay_tab_width: 4
-#   coderay_bold_every: 10
-#   coderay_css: class
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+coderay:
+  coderay_wrap: div
+  coderay_line_numbers: nil
+  coderay_tab_width: 4
+  coderay_bold_every: 10
+  coderay_css: class
 
 excerpt_separator: "\n\n"
 
-gems:
-  - jemoji
-  - rouge
-  # - jekyll-mentions
-  - jekyll-sitemap
+gems: []
+  # - jemoji
+  # - rouge
+  # # - jekyll-mentions
+  # - jekyll-sitemap
   - jekyll-html-pipeline
 
 disqus:
