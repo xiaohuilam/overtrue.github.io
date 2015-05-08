@@ -7,7 +7,7 @@ excerpt: 在 centos 系统下编译安装 Git 的最新版本笔记
 ## 安装依赖包
 
 ```shell
-yum -y install zlib-devel openssl-devel perl cpio expat-devel gettext-devel openssl zlib autoconf tk perl-ExtUtils-MakeMaker
+yum -y install zlib-devel curl-devel openssl-devel perl cpio expat-devel gettext-devel openssl zlib autoconf tk perl-ExtUtils-MakeMaker
 ```
 
 ## 获取最新版 Git 源码包
