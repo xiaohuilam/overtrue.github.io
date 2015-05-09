@@ -54,5 +54,6 @@ public function getCurrentAction()
 ```
 
 另外推荐近期完成的两个 Laravel 拓展包：
+
 - [overtrue/laravel-lang](https://github.com/overtrue/laravel-lang) 基于 [Laravel4-lang](https://github.com/caouecs/Laravel4-lang) 的 44 语种语言文件
 - [overtrue/laravel-pinyin](https://github.com/overtrue/laravel-pinyin) Laravel 中文转拼音， 基于 [overtrue/pinyin](https://github.com/overtrue/pinyin)
