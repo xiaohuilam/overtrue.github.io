@@ -19,7 +19,7 @@ menu: Open-Source
               {% continue %}
             {% endif %}
               <li class="collection-card">
-                  <a href="{{ repo.html_url }}" target="_blank" class="collection-card-image geopattern" data-pattern-id="{{ repo.name | split:'' | reverse | join:'' | truncate: 4, ''}}">
+                  <a href="{{ repo.html_url }}" target="_blank" class="collection-card-image geopattern" data-pattern-id="{{ repo.name | split:'' | reverse | join:'' | truncate: 7, ''}}">
                       <h3 class="collection-card-title">{{ repo.name }}</h3>
                   </a>
                   <p class="collection-card-body">{{ repo.description }}</p>
