@@ -19,24 +19,22 @@ menu: Open-Source
               {% continue %}
             {% endif %}
               <li class="collection-card">
-                  <a href="{{ repo.html_url }}" target="_blank">
-                    <div class="collection-card-image geopattern" data-pattern-id="{{ repo.name }}">
-                        <h3 class="collection-card-title">{{ repo.name }}</h3>
-                    </div>
-                    <p class="collection-card-body">{{ repo.description }}</p>
-                    <div class="collection-card-meta">
-                      <span class="meta-info tooltipped tooltipped-n {{ repo.language }}" aria-label="{{ repo.language }} project">{{ repo.language }}</span>
-                      <span class="meta-info tooltipped tooltipped-n" aria-label="{{ repo.stargazers_count }} stars">
-                          <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}</span>
-                      <span class="meta-info tooltipped tooltipped-n" aria-label="{{ repo.forks_count }} forks">
-                          <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
-                      </span>
-                      <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：{{ repo.updated_at | date: "%F" }}">
-                          <span class="octicon octicon-clock"></span>
-                          <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at | date: "%F" }}"> {{ repo.updated_at | date: "%F" }}</time>
-                      </span>
-                    </div>
+                  <a href="{{ repo.html_url }}" target="_blank" class="collection-card-image geopattern" data-pattern-id="{{ repo.name }}">
+                      <h3 class="collection-card-title">{{ repo.name }}</h3>
                   </a>
+                  <p class="collection-card-body">{{ repo.description }}</p>
+                  <div class="collection-card-meta">
+                          <span class="meta-info tooltipped tooltipped-n {{ repo.language }}" aria-label="{{ repo.language }} project">{{ repo.language }}</span>
+                          <span class="meta-info tooltipped tooltipped-n" aria-label="{{ repo.stargazers_count }} stars">
+                              <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}</span>
+                          <span class="meta-info tooltipped tooltipped-n" aria-label="{{ repo.forks_count }} forks">
+                              <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
+                          </span>
+                          <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：{{ repo.updated_at | date: "%F" }}">
+                              <span class="octicon octicon-clock"></span>
+                              <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at | date: "%F" }}"> {{ repo.updated_at | date: "%F" }}</time>
+                          </span>
+                  </div>
               </li>
           {% endfor %}
         </ul>
