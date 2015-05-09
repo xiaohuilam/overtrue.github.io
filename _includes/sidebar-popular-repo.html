@@ -4,7 +4,7 @@
     {% if site.popular_repos contains repo.name %}
     <section class="repo-card">
         <a href="{{ repo.html_url }}" target="_blank">
-            <div class="repo-card-image geopattern" data-pattern-id="{{ repo.name | truncate: 7,'' }}">
+            <div class="repo-card-image geopattern" data-pattern-id="{{ repo.name | truncate: 9,'' }}">
                 <h3 class="repo-card-title">{{ repo.name }}</h3>
             </div>
             <div class="repo-card-body-wrapper">
