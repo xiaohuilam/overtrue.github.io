@@ -319,7 +319,9 @@ Capsule::setPaginator(function() use ($app, $config) {
 
 //...
 ```
-完整的eloquent初始化步骤请参考： https://github.com/overtrue/rester/blob/master/start/eloquent.php
+完整的eloquent初始化步骤请参考：
+
+https://github.com/overtrue/rester/blob/master/start/eloquent.php
 
 
 然后我们就可以正常使用分页功能了：
