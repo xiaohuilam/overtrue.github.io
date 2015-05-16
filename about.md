@@ -14,7 +14,7 @@ menu: About
 - 主页：[http://overtrue.me](http://overtrue.me)
 - 微博：[@安正超](http://weibo.com/joychaocc)
 
-计算机专业毕业，{{ assign now | date:"%Y" }} {{ now | minus: 2012 }}年在职工作经验，{{ now | minus: 2010 }} 年 web 开发经验。
+计算机专业毕业，{{ assign now | date:"%Y" }} {{now}}{{ now | minus: 2012 }}年在职工作经验，{{ now | minus: 2010 }} 年 web 开发经验。
 
 ## 教育
 - 大连工业大学网络技术专业 — 大专 2009 - 2012
