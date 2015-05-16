@@ -1,9 +1,9 @@
 @import "../../bower_components/primer-css/scss/primer";
 
 body {
-    font-family: "Helvetica Neue", "Microsoft Yahei", "Microsoft Sans Serif", "WenQuanYi Micro Hei", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    //font-family: "Helvetica Neue", "Microsoft Yahei", "Microsoft Sans Serif", "WenQuanYi Micro Hei", Helvetica, //"Segoe UI", Arial, freesans, sans-serif;
+    //font-size: 16px;
+    //line-height: 1.6;
     word-wrap: break-word;
     -webkit-font-smoothing: antialiased;
 }
@@ -32,10 +32,6 @@ body {
 .btn-inline .btn {
     margin: 5px;
 }
-
-//.markdown p {
-//    text-indent:2rem;
-//}
 
 /*** header ***/
 .site-header {
