@@ -186,21 +186,25 @@ class Paginator implements
     {
         return serialize($this->items);
     }
+
     /** {@inhertDoc} */
     public function unserialize($data)
     {
         return $this->items = unserialize($data);
     }
+
     /** {@inhertDoc} **/
     public function getIterator()
     {
         return new ArrayIterator($this->items);
     }
+
     /** {@inhertDoc} */
     public function count($mode = COUNT_NORMAL)
     {
         return count($this->items, $mode);
     }
+
     /**
      * Get a data by key
      *
@@ -211,6 +215,7 @@ class Paginator implements
     public function __get($key) {
         return $this[$key];
     }
+
     /**
      * Assigns a value to the specified data
      *
@@ -223,6 +228,7 @@ class Paginator implements
     {
         $this->items[$key] = $value;
     }
+
     /**
      * Whether or not an data exists by key
      *
@@ -234,6 +240,7 @@ class Paginator implements
     {
         return isset($this->items[$key]);
     }
+
     /**
      * Unsets an data by key
      *
@@ -243,6 +250,7 @@ class Paginator implements
     {
         unset($this->items[$key]);
     }
+
     /**
      * Assigns a value to the specified offset
      *
@@ -255,6 +263,7 @@ class Paginator implements
     {
         $this->items[$offset] = $value;
     }
+
     /**
      * Whether or not an offset exists
      *
@@ -268,6 +277,7 @@ class Paginator implements
     {
         return isset($this->items[$offset]);
     }
+
     /**
      * Unsets an offset
      *
@@ -281,6 +291,7 @@ class Paginator implements
             unset($this->items[$offset]);
         }
     }
+
     /**
      * Returns the value at specified offset
      *
@@ -330,7 +341,7 @@ foreach ($users as $user) {
 // json encode
 $json = json_encode($users);
 
-// count 
+// count
 $count = count($users);
 
 //...
