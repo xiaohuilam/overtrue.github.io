@@ -3,7 +3,7 @@ layout: page
 title: 关于
 menu: About
 ---
-{% assign current_year = site.time | date: '%y' %}
+{% assign current_year = site.time | date: '%Y' %}
 
 安正超
 ===
