@@ -3,7 +3,7 @@ layout: page
 title: 关于
 menu: About
 ---
-{% assign current_year = settings.stats_updated_at | date: '%Y' %}
+{% assign current_year = 2015 %}
 
 安正超
 ===
@@ -15,7 +15,7 @@ menu: About
 - 主页：[http://overtrue.me](http://overtrue.me)
 - 微博：[@安正超](http://weibo.com/joychaocc)
 
-计算机专业毕业，{{current_year}}{{ current_year | minus: 2012 }}年在职工作经验，{{ current_year | minus: 2010 }} 年 web 开发经验。
+计算机专业毕业，{{ current_year | minus: 2012 }}年在职工作经验，{{ current_year | minus: 2010 }} 年 web 开发经验。
 
 ## 教育
 - 大连工业大学网络技术专业 — 大专 2009 - 2012
