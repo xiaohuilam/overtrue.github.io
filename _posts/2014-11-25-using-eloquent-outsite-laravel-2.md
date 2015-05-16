@@ -359,7 +359,7 @@ $count = count($users);
     <li><a href="#">4</a></li>
     <li><a href="#">5</a></li>
     <li><a href="#">&raquo;</a></li>
-  </ul>
+</ul>
 ```
 demo:
 
