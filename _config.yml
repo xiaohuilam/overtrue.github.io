@@ -19,7 +19,8 @@ source_code: https://github.com/overtrue/overtrue.github.io
 
 
 # Build settings
-markdown: redcarpet2
+markdown: redcarpet
+pygments: true
 kramdown:
   input: GFM
   auto_ids: true
