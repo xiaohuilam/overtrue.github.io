@@ -17,37 +17,34 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 1. 使用 `composer`:
 
   ```
-  composer global require "squizlabs/php_codesniffer=*"
+    composer global require "squizlabs/php_codesniffer=*"
   ```
 
-    > 注意，你可能需要将 `~/.composer/vendor/bin/` 添加到 PATH 环境变量中，否则会报命令找不到。
+  > 注意，你可能需要将 `~/.composer/vendor/bin/` 添加到 PATH 环境变量中，否则会报命令找不到。
 
 2. 使用 PEAR:
 
   ```
-  pear install PHP_CodeSniffer
+    pear install PHP_CodeSniffer
   ```
 
 3. 下载安装：
 
   ```
-  curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-  php phpcs.phar -h
-
-  curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar
-  php phpcbf.phar -h
+    curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+    php phpcs.phar -h
+    curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar
+    php phpcbf.phar -h
   ```
 
   然后移动到命令目录：
 
   ```
-  mv phpcs.phar /usr/bin/phpcs
-  mv phpcbf.phar /usr/bin/phpcbf
-
-  // 也许需要 sudo
-
-  chmod +x /usr/bin/phpcs
-  chmod +x /usr/bin/phpcbf
+   mv phpcs.phar /usr/bin/phpcs
+   mv phpcbf.phar /usr/bin/phpcbf
+   // 也许上面需要 sudo
+   chmod +x /usr/bin/phpcs
+   chmod +x /usr/bin/phpcbf
   ```
 
   这里的 `phpcbf` 是代码修复工具。
