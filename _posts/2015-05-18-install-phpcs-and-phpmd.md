@@ -123,15 +123,15 @@ patch -p0 -ui /path/to/changes.diff
 
  第二种：使用 PHP Code Beautifier 和 Fixer：
 
-    ```
-    phpcbf /path/to/code
-    ```
+```
+phpcbf /path/to/code
+```
 
   以上命令会自动修复原文件，如果不想直接覆盖原文件，可以使用 `--suffix` 指定修复后的代码后缀：
 
-    ```
-    phpcs /path/to/code --suffix=.fixed
-    ```
+```
+phpcs /path/to/code --suffix=.fixed
+```
 
 更多 PHPCS 的使用请参考：https://github.com/squizlabs/PHP_CodeSniffer/wiki
 
