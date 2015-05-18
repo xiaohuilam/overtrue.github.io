@@ -118,7 +118,7 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
   ```sh
     $ phpcs --report-diff=/path/to/changes.diff /path/to/code
     $ patch -p0 -ui /path/to/changes.diff
-    patching file /path/to/code/file.php
+    # patching file /path/to/code/file.php
   ```
 
   第二种：使用 PHP Code Beautifier 和 Fixer：
