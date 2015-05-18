@@ -115,9 +115,11 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
  第一种：使用 diff 形式打补丁：
 
+    ```sh
     phpcs --report-diff=/path/to/changes.diff /path/to/code
     patch -p0 -ui /path/to/changes.diff
     # patching file /path/to/code/file.php
+    ```
 
  第二种：使用 PHP Code Beautifier 和 Fixer：
 
