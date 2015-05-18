@@ -33,12 +33,6 @@ curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar
 php phpcbf.phar -h
 ```
 
-```php
-<?php
-
-echo 'foo';
-```
-
   然后移动到命令目录：
 
 ```sh
