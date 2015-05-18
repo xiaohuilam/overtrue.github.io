@@ -12,15 +12,13 @@ $brand-orange:     #f93    !default;
 $brand-purple:     #6e5494 !default;
 
 // Font stack
-//$body-font: /*Helvetica,*/ arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$body-font: '';
+$body-font: /*Helvetica,*/ arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 // The base body size
 $body-font-size: 14px !default;
-$body-font-size: '';
 
 // Monospace font stack
-$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+$mono-font: Monaco, Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 
 // State indicators.
 $status-open:     $brand-green;
