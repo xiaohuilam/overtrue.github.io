@@ -144,40 +144,40 @@ phpcs /path/to/code --suffix=.fixed
 
 1. 下载 `phar` 文件安装：
 
-    ```
-    wget -c http://static.phpmd.org/php/latest/phpmd.phar
-    mv phpmd.phar /usr/bin/phpmd
-    chmod +x /usr/bin/phpmd
-    ```
+```
+wget -c http://static.phpmd.org/php/latest/phpmd.phar
+mv phpmd.phar /usr/bin/phpmd
+chmod +x /usr/bin/phpmd
+```
 
 2. 使用 `Composer` 安装：
 
-    ```
-    composer global require phpmd/phpmd
-    ```
+```
+composer global require phpmd/phpmd
+```
 
 ### 使用
 
 - 检查代码质量：
 
-    ```
-    # phpmd 代码路径 报告格式
-    phpmd /path/to/source text
-    ```
+```
+# phpmd 代码路径 报告格式
+phpmd /path/to/source text
+```
 
   或者指定要检查的规则：
 
-    ```
-    # phpmd 代码路径 报告格式 规则列表
-    phpmd /path/to/source text codesize,unusedcode,naming
-    ```
+```
+# phpmd 代码路径 报告格式 规则列表
+phpmd /path/to/source text codesize,unusedcode,naming
+```
 
   或者使用xml指定检查规则：
 
-    ```
-    # phpmd 代码路径 报告格式 规则xml文件
-    phpmd /path/to/source text /phpmd_ruleset.xml
-    ```
+```
+# phpmd 代码路径 报告格式 规则xml文件
+phpmd /path/to/source text /phpmd_ruleset.xml
+```
 
 - 报告格式有：
     - xml, 以 XML 格式输出；
