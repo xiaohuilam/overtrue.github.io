@@ -5,15 +5,15 @@ description: 安正超，网名overtrue，PHP工程师，从事web相关的开�
 keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,overtrue,Pinyin,汉字转拼音
 skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful, Stackoverflow, Sublime Text, OmniGaffale, OminiPlan]
 
+timezone:    PRC
+encoding:    UTF-8
 url: http://overtrue.me
 baseurl:  "/"
 domain:    overtrue.me
 permalink:     /articles/:year/:month/:title.html
 paginate_path: 'page:num'
 paginate:   10
-
 source_code: https://github.com/overtrue/overtrue.github.io
-
 
 # Build settings
 markdown:    kramdown
@@ -42,9 +42,6 @@ disqus:
 
 google:
     analytics_id: UA-55452630-1
-
-timezone:    PRC
-encoding:    UTF-8
 
 # navigation
 navs:
