@@ -144,7 +144,7 @@ phpcs /path/to/code --suffix=.fixed
 
 1. 下载 `phar` 文件安装：
 
-```
+```sh
 wget -c http://static.phpmd.org/php/latest/phpmd.phar
 mv phpmd.phar /usr/bin/phpmd
 chmod +x /usr/bin/phpmd
