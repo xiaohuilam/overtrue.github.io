@@ -12,28 +12,36 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
 1. 使用 `composer`:
 
+    ```sh
     composer global require "squizlabs/php_codesniffer=*"
+    ```
 
     > 注意，你可能需要将 `~/.composer/vendor/bin/` 添加到 PATH 环境变量中，否则会报命令找不到。
 
 2. 使用 PEAR:
 
+    ```sh
     pear install PHP_CodeSniffer
+    ```
 
 3. 下载安装：
 
+    ```sh
     curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
     php phpcs.phar -h
     curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar
     php phpcbf.phar -h
+    ```
 
   然后移动到命令目录：
 
+    ```sh
     mv phpcs.phar /usr/bin/phpcs
     mv phpcbf.phar /usr/bin/phpcbf
     // 也许上面需要 sudo
     chmod +x /usr/bin/phpcs
     chmod +x /usr/bin/phpcbf
+    ```
 
   这里的 `phpcbf` 是代码修复工具。
 
@@ -41,34 +49,43 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
 - 查看帮助：
 
-
+    ```sh
     phpcs --help
+    ```
 
 - 添加标准：
 
-
+    ```sh
     phpcs --config-set installed_paths PATH_TO_SEARCH_STANDARDS
-
+    ```
 
   注意：假设标准为 `Weibo`, 目录为:
 
-    `/Users/overtrue/code_standards/Weibo`
+    ```sh
+    /Users/overtrue/code_standards/Weibo
+    ```
 
   其中`Weibo` 里才是 `ruleset.xml`，那么对应上面的 `PATH_TO_SEARCH_STANDARDS` 应该为：
 
+    ```sh
     phpcs --config-set installed_paths /Users/overtrue/code_standards
+    ```
 
 - 查看已经安装的标准：
 
+    ```sh
     phpcs -i
+    ```
 
 - 查看配置：
 
+    ```sh
     phpcs --config-show
+    ```
 
 - 检查代码规范：
 
-    ```
+    ```sh
     phpcs ./codes/Example.php
     // or
     phpcs ./codes/
@@ -76,19 +93,19 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
   指定标准：
 
-    ```
+    ```sh
     phpcs ./codes/Example.php --standard=PSR2
     ```
 
   报告格式：
 
-    ```
+    ```sh
     phpcs --report=summary /path/to/code
     ```
 
   可用的格式有（默认为: `full`）：
 
-    ```
+    ```sh
     full, xml, checkstyle, csv
     json, emacs, source, summary, diff
     svnblame, gitblame, hgblame or notifysend
@@ -106,7 +123,7 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
   第二种：使用 PHP Code Beautifier 和 Fixer：
 
-    ```
+    ```sh
     phpcbf /path/to/code
     ```
 
@@ -127,7 +144,7 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
 1. 下载 `phar` 文件安装：
 
-    ```
+    ```sh
     wget -c http://static.phpmd.org/php/latest/phpmd.phar
     mv phpmd.phar /usr/bin/phpmd
     chmod +x /usr/bin/phpmd
@@ -135,7 +152,7 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
 2. 使用 `Composer` 安装：
 
-    ```
+    ```sh
     composer global require phpmd/phpmd
     ```
 
@@ -143,21 +160,21 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
 - 检查代码质量：
 
-    ```
+    ```sh
     # phpmd 代码路径 报告格式
     phpmd /path/to/source text
     ```
 
   或者指定要检查的规则：
 
-    ```
+    ```sh
     # phpmd 代码路径 报告格式 规则列表
     phpmd /path/to/source text codesize,unusedcode,naming
     ```
 
   或者使用xml指定检查规则：
 
-    ```
+    ```sh
     # phpmd 代码路径 报告格式 规则xml文件
     phpmd /path/to/source text /phpmd_ruleset.xml
     ```
