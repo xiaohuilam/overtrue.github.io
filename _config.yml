@@ -33,11 +33,11 @@ kramdown:
   enable_coderay: true
 
 gems:
-  # - jemoji
+  - jemoji
   - rouge
   # # # - jekyll-mentions
   # - jekyll-sitemap
-  # - jekyll-html-pipeline
+  - jekyll-html-pipeline
 
 disqus:
   id: overtrueme
