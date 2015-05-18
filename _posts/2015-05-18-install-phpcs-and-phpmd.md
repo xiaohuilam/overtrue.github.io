@@ -12,17 +12,17 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
 ##### 使用 `composer`:
 
-    ```
-    composer global require "squizlabs/php_codesniffer=*"
-    ```
+```
+composer global require "squizlabs/php_codesniffer=*"
+```
 
-    > 注意，你可能需要将 `~/.composer/vendor/bin/` 添加到 PATH 环境变量中，否则会报命令找不到。
+> 注意，你可能需要将 `~/.composer/vendor/bin/` 添加到 PATH 环境变量中，否则会报命令找不到。
 
 ##### 使用 PEAR:
 
-    ```
-    pear install PHP_CodeSniffer
-    ```
+```
+pear install PHP_CodeSniffer
+```
 
 ##### 下载安装：
 
@@ -49,67 +49,67 @@ chmod +x /usr/bin/phpcbf
 
 ##### 查看帮助：
 
-    ```
-    phpcs --help
-    ```
+```
+phpcs --help
+```
 
 ##### 添加标准：
 
-    ```
-    phpcs --config-set installed_paths PATH_TO_SEARCH_STANDARDS
-    ```
+```
+phpcs --config-set installed_paths PATH_TO_SEARCH_STANDARDS
+```
 
-  注意：假设标准为 `Weibo`, 目录为:
+注意：假设标准为 `Weibo`, 目录为:
 
-    ```
-    /Users/overtrue/code_standards/Weibo
-    ```
+```
+/Users/overtrue/code_standards/Weibo
+```
 
   其中`Weibo` 里才是 `ruleset.xml`，那么对应上面的 `PATH_TO_SEARCH_STANDARDS` 应该为：
 
-    ```
-    phpcs --config-set installed_paths /Users/overtrue/code_standards
-    ```
+```
+phpcs --config-set installed_paths /Users/overtrue/code_standards
+```
 
 ##### 查看已经安装的标准：
 
-    ```
-    phpcs -i
-    ```
+```
+phpcs -i
+```
 
 ##### 查看配置：
 
-    ```
-    phpcs --config-show
-    ```
+```
+phpcs --config-show
+```
 
 ##### 检查代码规范：
 
-    ```
-    phpcs ./codes/Example.php
-    // or
-    phpcs ./codes/
-    ```
+```
+phpcs ./codes/Example.php
+// or
+phpcs ./codes/
+```
 
   指定标准：
 
-    ```
-    phpcs ./codes/Example.php --standard=PSR2
-    ```
+```
+phpcs ./codes/Example.php --standard=PSR2
+```
 
   报告格式：
 
-    ```
-    phpcs --report=summary /path/to/code
-    ```
+```
+phpcs --report=summary /path/to/code
+```
 
   可用的格式有（默认为: `full`）：
 
-    ```
-    full, xml, checkstyle, csv
-    json, emacs, source, summary, diff
-    svnblame, gitblame, hgblame or notifysend
-    ```
+```
+full, xml, checkstyle, csv
+json, emacs, source, summary, diff
+svnblame, gitblame, hgblame or notifysend
+```
 
 ##### 修复代码
 
