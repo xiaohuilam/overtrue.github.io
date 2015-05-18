@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PHP代码规范与质量检查工具PHPCS与PHPMD的安装与配置
+title: PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置
 excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的安装与配置
 ---
 
