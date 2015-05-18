@@ -10,8 +10,8 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
 有两种方式安装 PHPCS:
 
-1. `使用[composer](http://getcomposer.org/)`
-2. `使用 PEAR`
+1. 使用[`composer`](http://getcomposer.org/)
+2. 使用 `PEAR`
 3. 下载 `phar` 文件
 
 1. 使用 `composer`:
