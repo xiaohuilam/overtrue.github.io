@@ -6,7 +6,8 @@ keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,overtrue,P
 skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful, Stackoverflow, Sublime Text, OmniGaffale, OminiPlan]
 
 timezone:    PRC
-encoding:    UTF-8
+encoding: "utf-8"
+
 url: http://overtrue.me
 baseurl:  "/"
 domain:    overtrue.me
