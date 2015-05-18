@@ -171,7 +171,7 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
   ```
   # phpmd 代码路径 报告格式 规则xml文件
   phpmd /path/to/source text /phpmd_ruleset.xml
-    ```
+  ```
 
 - 报告格式有：
     - xml, 以 XML 格式输出；
