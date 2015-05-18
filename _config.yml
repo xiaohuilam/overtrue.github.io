@@ -11,6 +11,9 @@ domain:    overtrue.me
 permalink:     /articles/:year/:month/:title.html
 paginate_path: 'page:num'
 paginate:   10
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
 
 source_code: https://github.com/overtrue/overtrue.github.io
 
