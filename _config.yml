@@ -11,23 +11,25 @@ domain:    overtrue.me
 permalink:     /articles/:year/:month/:title.html
 paginate_path: 'page:num'
 paginate:   10
-highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
 
 source_code: https://github.com/overtrue/overtrue.github.io
 
 
 # Build settings
-markdown: kramdown
-pygments: true
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
 kramdown:
-  # input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  input: GFM
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
 coderay:
   coderay_wrap: div
   coderay_line_numbers: nil
