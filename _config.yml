@@ -48,8 +48,8 @@ kramdown:
     coderay_css:               style
 
 gems:
-  # - jemoji
-  # # - rouge
+  - jemoji
+  - rouge
   # # # - jekyll-mentions
   # - jekyll-sitemap
   # - jekyll-html-pipeline
