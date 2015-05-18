@@ -19,6 +19,7 @@ source_code: https://github.com/overtrue/overtrue.github.io
 # Build settings
 markdown:    kramdown
 highlighter: rouge
+excerpt_separator: ""
 
 kramdown:
   input: GFM
