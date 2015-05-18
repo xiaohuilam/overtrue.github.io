@@ -98,7 +98,7 @@ excerpt: PHP代码规范检查工具PHPCS与PHP代码质量检测工具PHPMD的�
     ```shell
     phpcs --report=summary /path/to/code
     ```
-    可用的格式有（默认为: `summary`）：
+    可用的格式有（默认为: `full`）：
 
     `full`, `xml`, `checkstyle`, `csv`
     `json`, `emacs`, `source`, `summary`, `diff`
