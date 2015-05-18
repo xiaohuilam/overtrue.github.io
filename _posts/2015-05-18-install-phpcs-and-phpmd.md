@@ -16,17 +16,17 @@ excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的�
 
 1. 使用 `composer`:
 
-    ```shell
-    composer global require "squizlabs/php_codesniffer=*"
-    ```
+  ```shell
+  composer global require "squizlabs/php_codesniffer=*"
+  ```
 
     > 注意，你可能需要将 `~/.composer/vendor/bin/` 添加到 PATH 环境变量中，否则会报命令找不到。
 
 2. 使用 PEAR:
 
-    ```shell
-    pear install PHP_CodeSniffer
-    ```
+  ```shell
+  pear install PHP_CodeSniffer
+  ```
 
 3. 下载安装：
 
