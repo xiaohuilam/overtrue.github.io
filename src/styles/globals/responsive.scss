@@ -42,6 +42,10 @@
         font-size: 2rem !important;
     }
 
+    .collection-card {
+        width:45%;
+    }
+
     .site-header {
         padding-bottom:0;
         h1 {
@@ -112,6 +116,11 @@
         .site-header-nav-item {
             min-width: 20%;
         }
+    }
+
+    .collection-card {
+        display:block;
+        width:auto;
     }
 
     .collection-head .collection-info .meta-info {

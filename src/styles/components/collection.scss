@@ -195,10 +195,15 @@
 }
 
 
+.collection-listing {
+    text-align:center;
+}
+
 .collection-card {
     position: relative;
-    float: left;
-    width: 313px;
+    display:inline-block;
+    width: 30%;
+    max-width: 313px;
     margin-right: 20px;
     margin-bottom: 20px;
     list-style-type: none;
@@ -206,16 +211,13 @@
     border: 1px solid #ddd;
     border-radius: 3px;
     overflow:hidden;
+    padding: 0 10px;
 }
 
 .collection-card .draft-tag {
     position: absolute;
     top: -1px;
     left: 10px
-}
-
-.collection-card:nth-child(3n+3) {
-    margin-right: 0
 }
 
 .collection-card-title {
@@ -243,7 +245,7 @@
 .collection-card-image {
     position: relative;
     display: table;
-    width: 313px;
+    width: 100.5555%;
     height: 120px;
     margin: -1px;
     margin-bottom: 15px;
@@ -260,7 +262,7 @@
     margin-top: 5px;
     margin-bottom: 15px;
     color: #777;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .collection-card-meta .meta-info {
