@@ -44,6 +44,7 @@
 
     .collection-card {
         width:45%;
+        height: 225px;
     }
 
     .site-header {
@@ -120,7 +121,8 @@
 
     .collection-card {
         display:block;
-        width:auto;
+        margin:0 auto;
+        max-width: 500px;
     }
 
     .collection-head .collection-info .meta-info {
