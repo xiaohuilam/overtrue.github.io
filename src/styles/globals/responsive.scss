@@ -9,6 +9,13 @@
     display:none;
 }
 
+@media (max-width: 60em) {
+    .collection-card {
+        width:45%;
+        height: 225px;
+    }
+}
+
 
 @media (max-width: 50em) {
     .mobile-block {
@@ -40,11 +47,6 @@
 
     .collection-head h1.collection-header {
         font-size: 2rem !important;
-    }
-
-    .collection-card {
-        width:45%;
-        height: 225px;
     }
 
     .site-header {
