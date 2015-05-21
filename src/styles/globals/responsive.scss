@@ -35,7 +35,7 @@
     }
 
     .home .banner .collection-head {
-        padding: 1rem;
+        padding: 1rem !important;
     }
 
     .collection-head h1.collection-header {
@@ -115,6 +115,6 @@
 
     .collection-head .collection-info .meta-info {
         display:block;
-        marin-top:15px;
+        margin-top:15px;
     }
 }
