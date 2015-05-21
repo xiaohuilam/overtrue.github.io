@@ -112,19 +112,13 @@
     }
 }
 
-@media (max-width: 30em) {
+
+@media (max-width: 20em) {
     .site-header-nav {
         .site-header-nav-item {
             min-width: 20%;
         }
     }
-
-    .collection-card {
-        display:block;
-        margin:0.5rem auto;
-        max-width: 500px;
-    }
-
     .collection-head .collection-info .meta-info {
         display:block;
         margin-top:15px;
