@@ -73,17 +73,6 @@
         }
     }
 
-    .collection-card, .collection-card-image {
-        float: none;
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .collection-card-image {
-        display: table;
-        width:100.5%;
-    }
-
     .mini-repo-list-item .owner.css-truncate-target, .mini-repo-list-item .repo-and-owner.css-truncate-target {
         max-width: 300px;
     }
