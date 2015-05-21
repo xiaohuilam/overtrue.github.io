@@ -52,7 +52,7 @@ navs:
     label: Home
 
   -
-    href: /open-source.html
+    href: /open-source
     label: Open-Source
 
   -
@@ -64,6 +64,10 @@ navs:
     href: http://weibo.com/44294631
     label: Weibo
     target: _blank
+
+  -
+    href: /bookmark
+    label: Bookmark
 
   -
     href: /about
