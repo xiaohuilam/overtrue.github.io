@@ -35,7 +35,7 @@
     }
 
     .collection-head h1.collection-header {
-        font-size: 1.25rem !important;
+        font-size: 2.25rem !important;
     }
 
     .site-header h1 {
@@ -55,7 +55,7 @@
             padding: 0 2px;
             margin-left:0;
             font-size: 1rem;
-            min-width: 20%;
+            min-width: 16%;
             height: 2rem;
             line-height: 2rem;
             //float: left;
@@ -95,6 +95,22 @@
     }
 
     .markdown-body h5 {
-        font-size: 1em
+        font-size: 1em;
+        .site-header-nav-item {
+
+        }
+    }
+}
+
+@media (max-width: 30em) {
+    .site-header-nav {
+        .site-header-nav-item {
+            min-width: 20%;
+        }
+    }
+
+    .collection-head .collection-info .meta-info {
+        display:block;
+        marin-top:15px;
     }
 }
