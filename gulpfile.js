@@ -22,7 +22,6 @@ var appFiles = {
 var vendorFiles = {
   styles: [
           basePaths.bower + 'emojify/dist/css/sprites/emojify.min.css',
-          basePaths.bower + 'highlightjs/styles/github.css',
   ],
   scripts: [
           basePaths.bower + 'jquery/dist/jquery.min.js',

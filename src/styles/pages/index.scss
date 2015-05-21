@@ -1,0 +1,27 @@
+.home {
+    .site-header, .banner {
+        background: #4183c4;
+        color: #fff;
+    }
+
+    .banner {
+        .collection-head {
+            padding:3rem 0;
+            color: #fff;
+        }
+    }
+
+    .site-header {
+        h1 a {
+            color: #fff;
+        }
+
+        .site-header-nav-item {
+            color: rgba(255,255,255,0.5);
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
