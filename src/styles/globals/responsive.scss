@@ -16,9 +16,10 @@
     }
 }
 
-@media (max-width: 30em) {
+@media (max-width: 40em) {
     .collection-card {
         width:100%;
+        max-width: 500px;
         margin:10px auto;
     }
 }
