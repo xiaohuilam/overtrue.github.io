@@ -16,6 +16,13 @@
     }
 }
 
+@media (max-width: 30em) {
+    .collection-card {
+        width:100%;
+        margin:10px auto;
+    }
+}
+
 
 @media (max-width: 50em) {
     .mobile-block {
@@ -102,6 +109,7 @@
         }
     }
 }
+
 
 
 @media (max-width: 20em) {
