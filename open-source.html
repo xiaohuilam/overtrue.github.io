@@ -70,6 +70,10 @@ menu: Open-Source
 
             repoListWrap.html(repoList);
             $('.repo-count').html(repoCount);
+
+            $('.geopattern').each(function(){
+              $(this).geopattern($(this).data('pattern-id'));
+            });
         });
     });
 </script>
