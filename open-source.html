@@ -13,30 +13,59 @@ menu: Open-Source
         <p class="lead">共 <span class="repoCount">{{ repos | size }}</span> 个开源项目</p>
     </header>
     <div class="repo-list">
-        <ul class="collection-listing clearfix">
-            {% for repo in repos %}
-            {% if repo.fork %}
-              {% continue %}
-            {% endif %}
-              <li class="collection-card">
-                  <a href="{{ repo.html_url }}" target="_blank" class="collection-card-image geopattern" data-pattern-id="{{ repo.name | split:'' | reverse | join:'' | truncate: 7, ''}}">
-                      <h3 class="collection-card-title">{{ repo.name }}</h3>
-                  </a>
-                  <p class="collection-card-body">{{ repo.description }}</p>
-                  <div class="collection-card-meta">
-                          <span class="meta-info tooltipped tooltipped-n {{ repo.language }}" aria-label="{{ repo.language }} project">{{ repo.language }}</span>
-                          <span class="meta-info tooltipped tooltipped-n" aria-label="{{ repo.stargazers_count }} stars">
-                              <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}</span>
-                          <span class="meta-info tooltipped tooltipped-n" aria-label="{{ repo.forks_count }} forks">
-                              <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
-                          </span>
-                          <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：{{ repo.updated_at | date: "%F" }}">
-                              <span class="octicon octicon-clock"></span>
-                              <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at | date: "%F" }}"> {{ repo.updated_at | date: "%F" }}</time>
-                          </span>
-                  </div>
-              </li>
-          {% endfor %}
-        </ul>
+      <div class="blankslate"><h3>Loading...</h3></div>
     </div>
 </section>
+<div id="repo-template">
+  <li class="collection-card">
+      <a href="{{ repo.html_url }}" target="_blank" class="collection-card-image geopattern" data-pattern-id="{{ repo.name | split:'' | reverse | join:'' | truncate: 7, ''}}">
+          <h3 class="collection-card-title">[repo.name]</h3>
+      </a>
+      <p class="collection-card-body">[repo.description]</p>
+      <div class="collection-card-meta">
+        <span class="meta-info tooltipped tooltipped-n [repo.language]" aria-label="[repo.language] project">[repo.language]</span>
+        <span class="meta-info tooltipped tooltipped-n" aria-label="[repo.stargazers_count] stars">
+            <span class="octicon octicon-star"></span> [repo.stargazers_count]</span>
+        <span class="meta-info tooltipped tooltipped-n" aria-label="[repo.forks_count] forks">
+            <span class="octicon octicon-git-branch"></span> [repo.forks_count]
+        </span>
+        <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：[repo.updated_at]">
+            <span class="octicon octicon-clock"></span>
+            <time datetime="[repo.updated_at]" title="[repo.updated_at | date: "%F"]"> [repo.updated_at]</time>
+        </span>
+      </div>
+  </li>
+</div>
+<script src="/assets/js/underscore-min.js"></script>
+<script>
+    $(document).ready(function(){
+        var repoListWrap = $('.repo-list');
+        var repoList = $('<ul class="collection-listing clearfix"></ul>');
+
+        $.get('https://api.github.com/users/overtrue/repos?type=owner',
+          function(repos){
+            if (!repos) {
+              repoListWrap.html('<div class="blankslate"><h3>加载失败</h3><p>请刷新或稍后再试...</p></div>');
+            };
+
+            repos = _.sortBy(repos, function(repo){
+                return - (repo.stargazers_count + repo.forks_count + repo.watchers_count);
+            });
+
+            repos.forEach(function(repo){
+                if (repo.fork) return;
+
+                var date = new Date(repo.updated_at);
+                repo.updated_at = date.getFullYear() + '-' + (date.getDate() - 1) + '-' + date.getDay() + ' ' + date.getHours() + ':' + date.getMinutes();
+                var repoTemplate = $('#repo-template').html();
+                var item = repoTemplate.replace(/\[(.*?)\]/g, function(){
+                    return eval(arguments[1]);
+                });
+
+                repoList.append(item);
+            });
+
+            repoListWrap.html(repoList);
+        });
+    });
+</script>
