@@ -56,7 +56,10 @@ menu: Open-Source
                 repoCount++;
 
                 var date = new Date(repo.updated_at);
-                repo.updated_at = date.getFullYear() + '-' + (date.getDate() - 1) + '-' + date.getDay() + ' ' + date.getHours() + ':' + date.getMinutes();
+
+                repo.updated_at = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDay() + ' ' + date.getHours() + ':' + date.getMinutes();
+                repo.language = repo.language || 'unknown';
+
                 var repoTemplate = $('#repo-template').html();
                 var item = repoTemplate.replace(/\[(.*?)\]/g, function(){
                     return eval(arguments[1]);
