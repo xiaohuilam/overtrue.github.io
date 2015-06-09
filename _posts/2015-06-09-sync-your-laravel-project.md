@@ -13,8 +13,8 @@ excerpt: 同步你的项目结构，保持与官方新版一致，而不是每�
 这里假设我们的项目叫做 `blog`, 然后我们第一步要做的事情是添加官方`git`源:
 
 ```shell
-cd blog
-git remote add laravel https://github.com/laravel/laravel
+cd blog # 切到项目根目录
+git remote add laravel https://github.com/laravel/laravel # 添加一个源
 ```
 
 这里解释一下：
