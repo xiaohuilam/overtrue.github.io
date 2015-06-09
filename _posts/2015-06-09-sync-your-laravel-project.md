@@ -25,13 +25,13 @@ git remote add laravel https://github.com/laravel/laravel # 添加一个源
 
 1. 拉取指定的 Laravel 分支
 
-> 注意：在我们拉取 Laravel 源的代码前，请确认你的修改都已经保存并 `commit`。
+ > 注意：在我们拉取 Laravel 源的代码前，请确认你的修改都已经保存并 `commit`。
 
-```shell
-git pull laravel master
-```
+ ```shell
+ git pull laravel master
+ ```
 
-这里我们从 `laravel` 的源拉取 `master` 分支，当然你也可以拉取其它分支的代码。
+ 这里我们从 `laravel` 的源拉取 `master` 分支，当然你也可以拉取其它分支的代码。
 
 2. 合并冲突
 
