@@ -18,7 +18,7 @@ source_code: https://github.com/overtrue/overtrue.github.io
 
 # Build settings
 markdown:    kramdown
-highlighter: rouge
+highlighter: pygments
 lsi:         false
 excerpt_separator: "\n\n"
 
