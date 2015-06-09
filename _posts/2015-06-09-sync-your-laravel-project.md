@@ -23,7 +23,7 @@ git remote add laravel https://github.com/laravel/laravel # 添加一个源
 
 ## 拉取 Larvel 的新版代码
 
-1. 拉取指定的 Laravel 分支
+#### 拉取指定的 Laravel 分支
 
   > 注意：在我们拉取 Laravel 源的代码前，请确认你的修改都已经保存并 `commit`。
 
@@ -33,7 +33,7 @@ git remote add laravel https://github.com/laravel/laravel # 添加一个源
 
   这里我们从 `laravel` 的源拉取 `master` 分支，当然你也可以拉取其它分支的代码。
 
-2. 合并冲突
+#### 合并冲突
 
 拉取完代码，这时候通常是会冲突的，因为你的代码与官方的代码不一样了，冲突部分就是不相同的地方，那么你根据合并结果找到`CONFLICT (content): Merge conflict in xxxx.xxx` 部分的文件打开，找到冲突的地方合并就好了。
 
