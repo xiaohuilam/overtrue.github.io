@@ -3,12 +3,19 @@ layout: default
 ---
 <section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 15, ''}}">
     <div class="container">
-        <div class="collection-title">
-            <h1 class="collection-header">{{ page.title }}</h1>
-            <div class="collection-info">
-                <span class="meta-info">
-                    <span class="octicon octicon-calendar"></span> {{ page.date | date: "%Y/%m/%d" }}
-                </span>
+        <div class="columns">
+            <div class="column three-fourths">
+                <div class="collection-title">
+                    <h1 class="collection-header">{{ page.title }}</h1>
+                    <div class="collection-info">
+                        <span class="meta-info">
+                            <span class="octicon octicon-calendar"></span> {{ page.date | date: "%Y/%m/%d" }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="column one-fourth">
+                {% include title-ad.html %}
             </div>
         </div>
     </div>
