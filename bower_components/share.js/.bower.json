@@ -1,0 +1,31 @@
+{
+  "name": "share.js",
+  "main": "share.js",
+  "homepage": "https://github.com/overtrue/share.js",
+  "authors": [
+    "overtrue <anzhengchao@gmail.com>"
+  ],
+  "description": "分享链接到中国的社交网站的jQuery插件",
+  "keywords": [
+    "share",
+    "SNS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "43adc71d47",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "43adc71d4748ac64a75e30d99c4c2386cddccd04"
+  },
+  "_source": "git://github.com/overtrue/share.js.git",
+  "_target": "*",
+  "_originalSource": "overtrue-share.js",
+  "_direct": true
+}

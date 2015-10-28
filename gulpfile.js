@@ -12,21 +12,32 @@ var paths = {
     src: basePaths.src + 'styles/',
     dest: basePaths.dest + 'css/'
   },
+  fonts: {
+    src: basePaths.src + 'fonts/',
+    dest: basePaths.dest + 'fonts/'
+  }
 };
 
 var appFiles = {
   styles: [ paths.styles.src + '**/*.scss' ],
-  scripts: [ paths.scripts.src + '**/*.js' ]
+  scripts: [ paths.scripts.src + '**/*.js' ],
+  fonts: []
 };
 
 var vendorFiles = {
   styles: [
           basePaths.bower + 'emojify/dist/css/sprites/emojify.min.css',
+          basePaths.bower + 'share.js/share.css',
   ],
   scripts: [
           basePaths.bower + 'jquery/dist/jquery.min.js',
           basePaths.bower + 'highlightjs/highlight.pack.js',
           basePaths.bower + 'emojify/dist/js/emojify.min.js',
+          basePaths.bower + 'share.js/share.js',
+  ],
+  fonts: [
+    basePaths.bower + 'share.js/fonts/*',
+    basePaths.bower + 'octicons/octicons/*',
   ]
 };
 
@@ -95,8 +106,13 @@ gulp.task('scripts', function(){
     .pipe(gulp.dest(paths.scripts.dest));
 });
 
+gulp.task('fonts', function(){
+  return gulp.src(vendorFiles.fonts.concat(appFiles.fonts))
+    .pipe(gulp.dest(paths.fonts.dest));
+});
 
-gulp.task('watch', ['css', 'scripts'], function(){
+
+gulp.task('watch', ['css', 'scripts', 'fonts'], function(){
   gulp.watch(appFiles.styles, ['css']).on('change', function(evt) {
     changeEvent(evt);
   });
