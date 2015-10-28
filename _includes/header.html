@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/assets/css/components/boxed-group.css">
     <link rel="stylesheet" href="/assets/css/globals/common.css">
     <link rel="stylesheet" href="/assets/css/globals/prism.css">
-    <link rel="stylesheet" href="/assets/css/share.css">
+    <link rel="stylesheet" href="assets/vendor/share.js/dist/css/share.min.css">
     <link rel="stylesheet" href="/assets/css/globals/responsive.css">
     {% for css in page.css %}
     <link rel="stylesheet" href="/assets/css/{{css}}">
@@ -76,7 +76,7 @@
     {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%d" }}">
     {% endif %}
-    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
 </head>
 <body class="{{ page.class }}">
     <header class="site-header">

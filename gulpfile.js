@@ -15,6 +15,10 @@ var paths = {
   fonts: {
     src: basePaths.src + 'fonts/',
     dest: basePaths.dest + 'fonts/'
+  },
+  images: {
+    src: basePaths.src + 'images/',
+    dest: basePaths.dest + 'images/'
   }
 };
 
@@ -22,23 +26,6 @@ var appFiles = {
   styles: [ paths.styles.src + '**/*.scss' ],
   scripts: [ paths.scripts.src + '**/*.js' ],
   fonts: []
-};
-
-var vendorFiles = {
-  styles: [
-          basePaths.bower + 'emojify/dist/css/sprites/emojify.min.css',
-          basePaths.bower + 'share.js/share.css',
-  ],
-  scripts: [
-          basePaths.bower + 'jquery/dist/jquery.min.js',
-          basePaths.bower + 'highlightjs/highlight.pack.js',
-          basePaths.bower + 'emojify/dist/js/emojify.min.js',
-          basePaths.bower + 'share.js/share.js',
-  ],
-  fonts: [
-    basePaths.bower + 'share.js/fonts/*',
-    basePaths.bower + 'octicons/octicons/*',
-  ]
 };
 
 /*
@@ -78,7 +65,7 @@ var clean = function(path, cb) {
 
 gulp.task('css', function(){
   // app css
-  return gulp.src(vendorFiles.styles.concat(appFiles.styles))
+  return gulp.src(appFiles.styles)
     .pipe(plugins.rubySass({
       style: sassStyle, sourcemap: sourceMap, precision: 2
     }))
@@ -98,7 +85,7 @@ gulp.task('css', function(){
 
 gulp.task('scripts', function(){
 
-  return gulp.src(vendorFiles.scripts.concat(appFiles.scripts))
+  return gulp.src(appFiles.scripts)
     // .pipe(plugins.concat('app.js'))
     .pipe(isProduction ? plugins.uglify() : gutil.noop())
     .pipe(plugins.size())
@@ -107,12 +94,23 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('fonts', function(){
-  return gulp.src(vendorFiles.fonts.concat(appFiles.fonts))
+  return gulp.src(appFiles.fonts)
     .pipe(gulp.dest(paths.fonts.dest));
 });
 
 
-gulp.task('watch', ['css', 'scripts', 'fonts'], function(){
+gulp.task('images', function(){
+  return gulp.src(paths.images.src + '/**/*')
+    .pipe(gulp.dest(paths.images.dest));
+});
+
+gulp.task('vendor', function(){
+  return gulp.src(basePaths.bower + '/**/*')
+    .pipe(gulp.dest(basePaths.dest + '/vendor'));
+});
+
+
+gulp.task('watch', ['css', 'scripts', 'fonts', 'images', 'vendor'], function(){
   gulp.watch(appFiles.styles, ['css']).on('change', function(evt) {
     changeEvent(evt);
   });
@@ -122,4 +120,4 @@ gulp.task('watch', ['css', 'scripts', 'fonts'], function(){
   });
 });
 
-gulp.task('default', ['css', 'scripts']);
+gulp.task('default', ['css', 'scripts', 'fonts', 'images', 'vendor']);
