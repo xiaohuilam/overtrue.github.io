@@ -26,7 +26,6 @@
     </footer>
     <!-- / footer -->
     <script src="/assets/vendor/share.js/dist/js/share.min.js"></script>
-    <script src="/assets/vendor/share.js/dist/js/jquery.qrcode.min.js"></script>
     <script src="/assets/js/geopattern.js"></script>
     <script src="/assets/js/prism.js"></script>
     <link rel="stylesheet" href="/assets/css/globals/prism.css">
@@ -36,10 +35,6 @@
         $('.geopattern').each(function(){
           $(this).geopattern($(this).data('pattern-id'));
         });
-
-        // share
-        $('.share-bar').share();
-
        // hljs.initHighlightingOnLoad();
       });
     </script>
