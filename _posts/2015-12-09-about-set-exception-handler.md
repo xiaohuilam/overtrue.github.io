@@ -74,7 +74,7 @@ throw new Exception("Exception two", 1);
 
 然后我去回答了我之前搜索到没有答案的两个问题：
 
-- http://stackoverflow.com/questions/14411492/cannot-destroy-active-lambda-function/34181805#34181805
-- http://stackoverflow.com/questions/12378644/how-can-i-retrieve-the-current-error-handler
+- [Cannot destroy active lambda function](http://stackoverflow.com/questions/14411492/cannot-destroy-active-lambda-function/34181805#34181805)
+- [How can I retrieve the current error handler?](http://stackoverflow.com/questions/12378644/how-can-i-retrieve-the-current-error-handler)
 
-希望有此想法的同学能得到帮助， :smile:
+希望有此想法的同学能得到帮助。 :smile:
