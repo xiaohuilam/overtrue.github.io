@@ -239,11 +239,7 @@ body,.markdown-body {
 }
 
 /* sns share */
-.sns-share { padding: 30px 0;}
-.sns-share i {display: inline-block; margin-right:6px;}
-.sns-share i svg {display: inline-block; width: 32px; height: 32px; fill: #666; cursor: pointer;}
-.sns-share i svg:hover {fill:#1abc9c;}
-
+.share { margin: 20px 0;}
 
 .markdown-body {
     overflow: hidden;
