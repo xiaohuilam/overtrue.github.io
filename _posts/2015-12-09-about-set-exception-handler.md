@@ -19,7 +19,7 @@ set_exception_handler(function(Exception $e){
     echo "Old handler:".$e->getMessage();
 });
 
-set_exception_handler(function(Exception $e) use (&$lastHandler) {
+set_exception_handler(function(Exception $e) {
     if ($e instanceof MyException) {
         echo "New handler:".$e->getMessage();
         return;
