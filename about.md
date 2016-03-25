@@ -33,7 +33,8 @@ menu: About
 | PHP | ★★★★★ |
 | javascript | ★★★★☆ |
 | Linux | ★★★★☆ |
+| Swift | ★★★☆☆ |
 | Nodejs | ★★★★☆ |
 | Markdown | ★★★★★ |
-| C | ★★★☆☆ |
+| C | ★★☆☆☆ |
 | Photoshop | ★★★★☆ |
