@@ -18,7 +18,6 @@ source_code: https://github.com/overtrue/overtrue.github.io
 
 # Build settings
 markdown:    kramdown
-highlighter: pygments
 lsi:         false
 excerpt_separator: "\n\n"
 
@@ -31,6 +30,7 @@ defaults: []
 kramdown:
   input: GFM
   enable_coderay: true
+  syntax_highlighter: rouge
 
 gems:
   - jemoji
