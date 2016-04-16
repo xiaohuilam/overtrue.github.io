@@ -1,6 +1,8 @@
-我所理解的 PHP Trait
-
-
+---
+layout: post
+title: 我所理解的 PHP Trait
+excerpt: 以我的解理来描述 PHP 5.4 加入的 Trait 语法。
+---
 
 [Trait](http://php.net/manual/zh/language.oop5.traits.php) 是从 PHP 5.4 加入的一种细粒度代码复用的语法。以下是官方手册对 Trait 的描述：
 
@@ -54,7 +56,7 @@ class Pruduct
     {
         return $this->brand;
     }
-  
+
     //...
 }
 ```
@@ -124,7 +126,7 @@ class Gift extends Pruduct
 class User extends Model
 {
     use Authenticate, SoftDeletes, Arrayable, Cacheable;
-    
+
     ...
 }
 ```
