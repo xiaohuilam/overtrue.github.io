@@ -10,7 +10,7 @@ excerpt: 在 PHP 全局异常处理器注册函数 set_exception_handler 注册�
 
 然后我找到了 [restore_exception_handler](http://php.net/manual/en/function.restore-exception-handler.php)，以为找到了救命稻草，于是我把代码改成如下：
 
-```php
+```php?start_inline=1
 <?php
 
 class MyException extends Exception {}
@@ -47,7 +47,7 @@ PHP Fatal error:  Cannot destroy active lambda function in /Users/overtrue/www/f
 
 于是此问题得以圆满解决，虽然恢复原有的 handler 是不可能了，但是达到同样的效果就 OK 了。
 
-```php
+```php?start_inline=1
 <?php
 
 class MyException extends Exception {}

@@ -14,13 +14,13 @@ Laravel 提供了很多默认事件，登录登出、数据库连接与查询、
 
 Laravel 5 里直接使用命令即可创建一个事件处理器:
 
-```php
+```php?start_inline=1
 php artisan handler:event AuthLoginEventHandler
 ```
 
 `AuthLoginEventHandler` 是我们定义的名称，你可以随意命名(合理的)，它会创建 `app/Handlers/Events/AuthLoginEventHandler.php`:
 
-```php
+```php?start_inline=1
 <?php namespace App\Handlers\Events;
 
 use Illuminate\Contracts\Queue\ShouldBeQueued;
@@ -55,7 +55,7 @@ class AuthLoginEventHandler {
 
 打开 `app/Providers/EventServiceProvider.php`，将我们的监听添加上:
 
-```php
+```php?start_inline=1
 protected $listen = [
     'auth.login' => [
         'App\Handlers\Events\AuthLoginEventHandler',
@@ -74,7 +74,7 @@ protected $listen = [
 
 这里 `auth.login` 事件框架会传递两个参数：`用户实例`, `是否记住登录`，所以我们修改我们刚刚创建的 `AuthLoginEventHandler.php` 中的 `handle` 方法：
 
-```php
+```php?start_inline=1
     /**
      * 处理用户登录
      *
@@ -96,7 +96,7 @@ protected $listen = [
 
 可以看到上面我们用到了 `Illuminate\Http\Request` 对象，所以我们还需要添加一个属性 `protected $request`，然后从构造方法 `__construct` 让框架注入进来（由框架完成注入）：
 
-```php
+```php?start_inline=1
     ...
 
     /**
@@ -121,7 +121,7 @@ protected $listen = [
 
 我们所有用到的类请记得引入。最后完整的 `AuthLoginEventHandler.php` 如下：
 
-```php
+```php?start_inline=1
 <?php namespace App\Handlers\Events;
 
 use Illuminate\Contracts\Queue\ShouldBeQueued;

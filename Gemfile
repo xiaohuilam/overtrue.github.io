@@ -1,4 +1,3 @@
-# # emoji
-gem 'jemoji'
-# # @xxx
-# gem 'jekyll-mentions'
+gem "jemoji"
+gem "jekyll-paginate"
+gem "jekyll-sitemap"

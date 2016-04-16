@@ -60,7 +60,7 @@ Generating autoload files
 
 demo/start.php:
 
-```php
+```php?start_inline=1
 <?php
 
 // 载入composer的autoload文件
@@ -68,7 +68,7 @@ include __DIR__ . '/vendor/autoload.php';
 ```
 然后我们加入数据库配置：
 
-```php
+```php?start_inline=1
 $database = [
     'driver'    => 'mysql',
     'host'      => 'localhost',
@@ -86,7 +86,7 @@ $database = [
 
 然后我们加入Eloquent初始化代码：
 
-```php
+```php?start_inline=1
 use Illuminate\Container\Container;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -107,9 +107,9 @@ $capsule->bootEloquent();
 
 最终的文件`demo/start.php`应该是这样：
 
-demo/start.php: 
+demo/start.php:
 
-```php
+```php?start_inline=1
 <?php
 
 // 载入composer的autoload文件
@@ -127,7 +127,7 @@ $database = [
 ];
 
 use Illuminate\Container\Container;
-use Illuminate\Database\Capsule\Manager as Capsule;//如果你不喜欢这个名称，as DB;就好 
+use Illuminate\Database\Capsule\Manager as Capsule;//如果你不喜欢这个名称，as DB;就好
 
 $capsule = new Capsule;
 
@@ -149,7 +149,7 @@ $capsule->bootEloquent();
 
 demo/table.php
 
-```php
+```php?start_inline=1
 <?php
 
 //包含Eloquent的初始化文件
@@ -180,7 +180,7 @@ php table.php
 表建立好了，然后我们插入数据，我们同样创建一个文件 `demo/insert.php`来做实验：
 
 
-```php
+```php?start_inline=1
 <?php
 
 //包含Eloquent的初始化文件
@@ -203,11 +203,11 @@ Capsule::table('users')->insert(array(
 
 只要你的模型继承Eloquent的Model类，就没问题了：
 
-```php
+```php?start_inline=1
 
-use  Illuminate\Database\Eloquent\Model  as Eloquent; 
+use  Illuminate\Database\Eloquent\Model  as Eloquent;
 
-class User extends  Eloquent 
+class User extends  Eloquent
 {
 	protected $table = 'users';
 }
@@ -216,7 +216,7 @@ class User extends  Eloquent
 
 那么你就可以很方便的像在Laravel框架里一样使用Eloquent了：
 
-```php
+```php?start_inline=1
 // 查询id为2的
 $users = User::find(2);
 
@@ -237,7 +237,7 @@ OK，这基本上就搞定了，当然，你用分页的时候会出问题，我
 
 为了给大家一个完整的示例，我这里使用[Slim](https://github.com/codeguy/slim)结合Eloquent做了一个实例：[overtrue/rester](https://github.com/overtrue/rester)
 
-[《在Laravel外使用Eloquent（二）- 分页问题》](/2014/11/25/using-eloquent-outside-laravel-2.html) 
+[《在Laravel外使用Eloquent（二）- 分页问题》](/2014/11/25/using-eloquent-outside-laravel-2.html)
 
 更多关于Eloquent的使用请参考: [http://v4.golaravel.com/docs/4.1/eloquent](http://v4.golaravel.com/docs/4.1/eloquent)
 

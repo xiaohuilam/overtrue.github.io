@@ -6,19 +6,19 @@ excerpt: 在 Laravel 项目中获取当前被调用的控制器名称和方法
 
 我们有时候需要获取当前 Laravel 项目的控制器或者方法名，框架默认是不会提供单独的方法的，框架只提供了如下的方法：
 
-```php
+```php?start_inline=1
 \Route::current()->getActionName();
 ```
 
 返回的结果是：
 
-```php
+```php?start_inline=1
 App\Http\Controllers\WelcomeController@index
 ```
 
 可是这不是我们想要的，我们只想获取控制器名或者方法名，那么，你可以自定义下面三个函数来实现：
 
-```php
+```php?start_inline=1
 /**
  * 获取当前控制器名
  *

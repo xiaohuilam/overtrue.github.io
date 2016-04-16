@@ -1,9 +1,9 @@
 title: overtrue | 安正超博客
 name: overtrue
 email: anzhengchao@gmail.com
-description: 安正超，网名overtrue，PHP工程师，从事web相关的开发工作。开源爱好者，GitHub:https://github.com/overtrue。
-keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,overtrue,Pinyin,汉字转拼音
-skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful, Stackoverflow, Sublime Text, OmniGaffale, OmniPlan]
+description: 安正超(overtrue)，PHP工程师，从事web相关的开发工作。开源爱好者，GitHub:https://github.com/overtrue。
+keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,PHP,overtrue,Pinyin,汉字转拼音
+skill_keywords: [PHP, Javascript, HTML+CSS, Swift, Linux, Laravel, Git, Mac, RESTful, Stackoverflow, Sublime Text, OmniGaffale, OmniPlan]
 
 timezone:    PRC
 encoding: "utf-8"
@@ -17,7 +17,6 @@ paginate:   10
 source_code: https://github.com/overtrue/overtrue.github.io
 
 # Build settings
-markdown:    kramdown
 lsi:         false
 excerpt_separator: "\n\n"
 
@@ -27,17 +26,23 @@ destination: ./_site
 quiet:    false
 defaults: []
 
+markdown:    kramdown
+highlighter: rouge
+
 kramdown:
   input: GFM
-  enable_coderay: true
-  syntax_highlighter: rouge
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+  line_numbers: true
 
 gems:
   - jemoji
-  - rouge
-  # # # - jekyll-mentions
-  # - jekyll-sitemap
-  - jekyll-html-pipeline
+  - jekyll-sitemap
+  - jekyll-paginate
 
 disqus:
   id: overtrueme
@@ -73,5 +78,6 @@ navs:
     href: /about
     label: About
 
+public_repositories: []
 popular_repos: ['pinyin', 'wechat', 'writor', 'laravel-wechat', 'laravel-lang', 'laravel-pinyin', 'latest-laravel', 'latest-lumen']
 contribute_repos: ['laravel/framework', 'tymondesigns/jwt-auth', 'caouecs/Laravel-lang']

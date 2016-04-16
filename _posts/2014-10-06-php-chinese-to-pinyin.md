@@ -19,7 +19,7 @@ excerpt: 到目前为止这可能是最准确的一个解决方案了，大GitHu
 
 基于CC-CEDICT词典的中文转拼音工具, 更准确的汉字转拼音解决方案。 [CC-CEDICT](http://cc-cedict.org/wiki/).
 
-```php
+```php?start_inline=1
 use \Overtrue\Pinyin;
 
 echo Pinyin::pinyin('带着希望去旅行，比到达终点更美好');
@@ -96,7 +96,7 @@ composer require overtrue/pinyin >=1.4
 
 # 使用
 
-```php
+```php?start_inline=1
 <?php
 use \Overtrue\Pinyin;
 
@@ -125,14 +125,14 @@ echo Pinyin::letter('带着希望去旅行，比到达终点更美好');
 
 example:
 
-```php
+```php?start_inline=1
 
 Pinyin::set('delimiter', '-');//全局
 echo Pinyin::pinyin('带着希望去旅行，比到达终点更美好');
 
 // dài-zhe-xī-wàng-qù-lǔ-xíng-bǐ-dào-dá-zhōng-diǎn-gèng-měi-hǎo
 ```
-```php
+```php?start_inline=1
 
 $setting = [
             'delimiter' => '-',
@@ -144,7 +144,7 @@ echo Pinyin::pinyin('带着希望去旅行，比到达终点更美好', $setting
 // dai-zhe-xi-wang-qu-lu-xing-bi-dao-da-zhong-dian-geng-mei-hao
 ```
 
-```php
+```php?start_inline=1
 Pinyin::set('accent', false);
 echo Pinyin::pinyin('带着希望去旅行，比到达终点更美好');
 

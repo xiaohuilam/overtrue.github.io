@@ -22,7 +22,7 @@ Trait，译作 **“特性”、“特征”、“特点”** 。那么问题就
 
 那么这里的 “可卖性” 就是一个特性，非卖品是没有价格的。我们便可以抽象出 “可卖性”  这个 Trait 来：
 
-```php
+```php?start_inline=1
 trait Sellable
 {
     protected $price = 0;
@@ -41,7 +41,7 @@ trait Sellable
 
 当然我们所有的产品都会有品牌与其它基本属性，所以我们通常会定义一个产品类：
 
-```php
+```php?start_inline=1
 class Pruduct
 {
     protected $brand;
@@ -63,7 +63,7 @@ class Pruduct
 
 我们的电视与电脑类：
 
-```php
+```php?start_inline=1
 class TV extends Pruduct
 {
     use Sellable;
@@ -95,7 +95,7 @@ class Computer extends Pruduct
 
 而鼠标垫与手办等礼品是不可卖的：
 
-```php
+```php?start_inline=1
 class Gift extends Pruduct
 {
     protected $name;
@@ -122,7 +122,7 @@ trait 有什么优势？来看一段代码：
 
 
 
-```php
+```php?start_inline=1
 class User extends Model
 {
     use Authenticate, SoftDeletes, Arrayable, Cacheable;
@@ -135,7 +135,7 @@ class User extends Model
 
 我们看到代码的时候一眼便知道当前支持了哪些个特性。再看下面另外一种写法：
 
-```php
+```php?start_inline=1
 abstract AdvansedUser {
   // ... 实现了 Authenticate, SoftDeletes, Arrayable, Cacheable 的所有方法
 }

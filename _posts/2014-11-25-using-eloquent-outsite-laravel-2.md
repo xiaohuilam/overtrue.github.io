@@ -8,7 +8,7 @@ excerpt: 在Laravel外使用Eloquent时分页问题的处理
 
 代码见：[https://github.com/overtrue/rester](https://github.com/overtrue/rester)
 
-```php
+```php?start_inline=1
 <?php
 
 namespace Rester;
@@ -308,7 +308,7 @@ class Paginator implements
 
 然后在我们初始化eloquent的方装载这个分页类到eloquent中就好：
 
-```php
+```php?start_inline=1
 //...
 use Rester\Paginator;
 
@@ -326,7 +326,7 @@ https://github.com/overtrue/rester/blob/master/start/eloquent.php
 
 然后我们就可以正常使用分页功能了：
 
-```php
+```php?start_inline=1
 $users = User::paginate(15);
 $users = User::where('status', 1)->paginate(15);
 ...
@@ -334,7 +334,7 @@ $users = User::where('status', 1)->paginate(15);
 
 因为上面的分页类实现了常用的[预定义接口](http://php.net/manual/zh/reserved.interfaces.php), 所以你可以很方便的使用分页结果：
 
-```php
+```php?start_inline=1
 // 遍历
 foreach ($users as $user) {
     // do sth.
@@ -363,7 +363,7 @@ $count = count($users);
 ```
 demo:
 
-```php
+```php?start_inline=1
 <div class="container">
     <?php foreach ($users as $user): ?>
         <?php echo $user->name; ?>

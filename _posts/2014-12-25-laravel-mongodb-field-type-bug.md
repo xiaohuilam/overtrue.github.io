@@ -21,7 +21,7 @@ excerpt: jenssegers/laravel-mongodb与MySQL关联查询时字段类型不一致�
 
 在**MySQL的模型里**对相应字段使用修改器(这里以id为例)：
 
-```php
+```php?start_inline=1
 /**
  * 避免与mongo关联时id转为字符的问题
  *
