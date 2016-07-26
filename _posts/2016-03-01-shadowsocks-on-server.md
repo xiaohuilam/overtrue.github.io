@@ -11,14 +11,14 @@ excerpt: 在国内服务器上经常装不上一些包，这时候我们可以�
 ## CentOS
 
 ```shell
-$ yum install python-pip    
+$ yum install python-pip
 $ pip install shadowsocks
 ```
 
 ## Ubuntu
 
 ```shell
-$ sudo apt-get install python-pip python-dev build-essential 
+$ sudo apt-get install python-pip python-dev build-essential
 $ pip install shadowsocks
 ```
 
@@ -46,7 +46,7 @@ $ vim /etc/shadowsocks.json
 }
 ```
 
-启动shawodsocks 
+启动shawodsocks
 
 ```shell
 $ nohup sslocal -c /etc/shadowsocks.json /dev/null 2>&1 &
@@ -74,3 +74,5 @@ $ curl --socks5 127.0.0.1:1080 http://httpbin.org/ip
   "origin": "45.124.xx.xx" # 如果这个 IP 是你 shadowsocks 服务器的 IP 就 OK了。
 }
 ```
+
+关于服务器设置全局代理请参考：http://www.thesysadminhimself.com/2013/08/configuring-web-proxy-on-centos.html
