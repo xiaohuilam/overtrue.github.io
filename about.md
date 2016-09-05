@@ -37,4 +37,4 @@ menu: About
 | Nodejs | ★★★★☆ |
 | Markdown | ★★★★★ |
 | C | ★★☆☆☆ |
-| Photoshop | ★★★★☆ |
+| Photoshop | ★★☆☆☆ |
