@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Summernote 图片上传到服务商实现方式
+title: Summernote 图片上传到服务端实现方式
 excerpt: Summernote 默认使用 data-url 形式来存储编辑器内的图片，本文介绍如何改为上传到服务器返回 url 形式。
 ---
 
