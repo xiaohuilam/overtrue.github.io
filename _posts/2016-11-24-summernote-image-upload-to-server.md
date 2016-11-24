@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
     //create record for attachment
     function sendFile(file, el) {
         data = new FormData();
-        data.append("file", file);
+        data.append("file", file); // 表单名称
 
         $.ajax({
             type: "POST",
