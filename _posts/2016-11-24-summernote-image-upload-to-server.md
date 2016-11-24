@@ -10,40 +10,40 @@ Summernote 默认使用 data-url 形式来存储编辑器内的图片，稍大�
 
 ```js
 jQuery(document).ready(function($) {
-        //upload image in description
-        $('#description').summernote({
-            height: 300,
-            callbacks: {
-                onImageUpload: function(files, editor, welEditable) {
-                        for (var i = files.length - 1; i >= 0; i--) {
-                            sendFile(files[i], this);
-                        }
+    //upload image in description
+    $('#description').summernote({
+        height: 300,
+        callbacks: {
+            onImageUpload: function(files, editor, welEditable) {
+                    for (var i = files.length - 1; i >= 0; i--) {
+                        sendFile(files[i], this);
                     }
-            }});
-
-        //create record for attachment
-        function sendFile(file, el) {
-            data = new FormData();
-            data.append("file", file);
-
-            $.ajax({
-                type: "POST",
-                url: "这里填写你的服务器端上传 URL",
-                data: data,
-                cache: false,
-                contentType: false,
-                processData: false,
-                dataType: 'json',
-                success: function(response) {
-                  // 这里可能要根据你的服务端返回的上传结果做一些修改哦
-                  $(el).summernote('editor.insertImage', '/' + response.url, response.filename);
-                },
-                error : function(error) {
-                  alert('图片上传失败');
-                },
-                complete : function(response) {
                 }
-            });
-        }
+        }});
+
+    //create record for attachment
+    function sendFile(file, el) {
+        data = new FormData();
+        data.append("file", file);
+
+        $.ajax({
+            type: "POST",
+            url: "这里填写你的服务器端上传 URL",
+            data: data,
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            success: function(response) {
+              // 这里可能要根据你的服务端返回的上传结果做一些修改哦
+              $(el).summernote('editor.insertImage', response.url, response.filename);
+            },
+            error : function(error) {
+              alert('图片上传失败');
+            },
+            complete : function(response) {
+            }
+        });
+    }
 });
 ```
