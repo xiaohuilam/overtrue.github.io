@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 关于 Composer 包版本约束的一点研究
+title: 关于 Composer 版本约束表达式的使用
 excerpt: 对于语意化版本你可能需要了解得更多一些，不然就轻易掉坑里去了。
 ---
 
