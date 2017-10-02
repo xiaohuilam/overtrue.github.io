@@ -8,13 +8,13 @@ skill_keywords: [PHP, Javascript, HTML+CSS, Swift, Linux, Laravel, Git, Mac, RES
 timezone:    PRC
 encoding: "utf-8"
 
-url: http://overtrue.me
+url: http://xiaohuilam.github.io
 baseurl:  "/"
-domain:    overtrue.me
+domain:    xiaohuilam.github.io
 permalink:     /articles/:year/:month/:title.html
 paginate_path: 'page:num'
 paginate:   10
-source_code: https://github.com/overtrue/overtrue.github.io
+source_code: https://github.com/xiaohuilam/xiaohuilam.github.io
 
 # Build settings
 lsi:         false
@@ -61,12 +61,12 @@ navs:
     label: Open-Source
 
   -
-    href: https://github.com/overtrue
+    href: https://github.com/xiaohuilam
     label: GitHub
     target: _blank
 
   -
-    href: http://weibo.com/44294631
+    href: http://weibo.com/wangziwenfans
     label: Weibo
     target: _blank
 
